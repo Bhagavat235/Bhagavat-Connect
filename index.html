@@ -10,6 +10,7 @@
     <style>
     :root {
     --primary-color: #c10000;
+    --primary-color-rgb: 193, 0, 0;
     --secondary-color: #ff3333;
     --accent-color: #870000;
     --text-color: #333;
@@ -71,17 +72,10 @@
             display: block;
         }
         
-        .logo-icon {
-            width: 50px;
-            height: 50px;
-            background-color: var(--primary-color);
-            color: white;
+        .logo img {
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 1.5rem;
+            object-fit: cover;
+            margin-right: 10px;
         }
         
         nav ul {
@@ -190,6 +184,19 @@
             justify-content: center;
             font-size: 3rem;
             color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-icon::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(var(--primary-color-rgb, 193, 0, 0), 0.3);
+            z-index: 1;
         }
         
         .service-content {
@@ -234,6 +241,38 @@
         
         .about-text p {
             margin-bottom: 20px;
+        }
+        
+        .expertise-section {
+            margin-top: 40px;
+        }
+        
+        .expertise-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .expertise-list {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .expertise-list li {
+            margin-bottom: 8px;
+        }
+        
+        .core-values {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: var(--light-color);
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .core-values h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
         }
         
         /* Contact Section */
@@ -377,16 +416,21 @@
             .hero p {
                 font-size: 1rem;
             }
+            
+            .expertise-section {
+                margin-top: 30px;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
-        <div class="logo">
-   <img src="S_16793609" alt="ภควัต คอนเนคท์ โลโก้" width="60">
-   <h1>ภควัต คอนเนคท์<span>BHAGAVAT CONNECT</span></h1>
-</div>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="your-logo-url.png" alt="ภควัต คอนเนคท์ โลโก้" width="60" height="60">
+                <h1>ภควัต คอนเนคท์<span>BHAGAVAT CONNECT</span></h1>
+            </div>
             <nav>
                 <ul>
                     <li><a href="#home">หน้าหลัก</a></li>
@@ -416,8 +460,8 @@
 </div>
           <div class="services-grid">
     <div class="service-card">
-        <div class="service-icon">
-            <img src="/api/placeholder/400/320" alt="ที่ปรึกษากฎหมาย" />
+        <div class="service-icon" style="background: url('/api/placeholder/400/320') center/cover; color: transparent;">
+            LAW
         </div>
         <div class="service-content">
             <h3>ที่ปรึกษากฎหมาย</h3>
@@ -425,8 +469,8 @@
         </div>
     </div>
     <div class="service-card">
-        <div class="service-icon">
-            <img src="/api/placeholder/400/320" alt="จำหน่ายและบริการเครื่องปรับอากาศ" />
+        <div class="service-icon" style="background: url('/api/placeholder/400/320') center/cover; color: transparent;">
+            AC
         </div>
         <div class="service-content">
             <h3>จำหน่ายและบริการเครื่องปรับอากาศ</h3>
@@ -434,8 +478,8 @@
         </div>
     </div>
     <div class="service-card">
-        <div class="service-icon">
-            <img src="/api/placeholder/400/320" alt="จำหน่ายเครื่องใช้ไฟฟ้าในครัวเรือน" />
+        <div class="service-icon" style="background: url('/api/placeholder/400/320') center/cover; color: transparent;">
+            HOME
         </div>
         <div class="service-content">
             <h3>จำหน่ายเครื่องใช้ไฟฟ้าในครัวเรือน</h3>
@@ -450,13 +494,47 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-image">
-                    <img src="/api/placeholder/400/320" alt="เกี่ยวกับบริษัท ภควัต คอนเนคท์" />
+                    <div style="height: 320px; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; font-weight: bold;">
+                        ภควัต<br>คอนเนคท์
+                    </div>
                 </div>
                 <div class="about-text">
                     <h2>เกี่ยวกับเรา</h2>
-                    <p>บริษัท ภควัต คอนเนคท์ จำกัด (Bhagavat Connect Co., Ltd.) ก่อตั้งขึ้นด้วยวิสัยทัศน์ที่ต้องการเชื่อมโยงธุรกิจเข้ากับโลกดิจิทัลอย่างมีประสิทธิภาพ เรามุ่งมั่นที่จะส่งมอบโซลูชั่นที่มีคุณภาพและตอบโจทย์ความต้องการของลูกค้า</p>
-                    <p>ด้วยทีมงานผู้เชี่ยวชาญและประสบการณ์หลายปี เราพร้อมที่จะเป็นพันธมิตรทางธุรกิจที่จะช่วยให้องค์กรของคุณประสบความสำเร็จในยุคดิจิทัล</p>
-                    <p>เราเชื่อมั่นในคุณค่าของนวัตกรรม คุณภาพ และความซื่อสัตย์ ซึ่งเป็นหัวใจสำคัญในการทำงานของเรา</p>
+                    <p>บริษัท ภควัต คอนเนคท์ จำกัด (Bhagavat Connect Co., Ltd.) ก่อตั้งขึ้นด้วยวิสัยทัศน์ในการเชื่อมโยงธุรกิจ กฎหมาย ศิลปะวัฒนธรรม และเทคโนโลยีดิจิทัลอย่างมีประสิทธิภาพ เรามุ่งนำเสนอทางออกเชิงระบบคุณภาพสูงที่ตอบโจทย์ความต้องการเฉพาะของลูกค้าทุกประเภท</p>
+                    
+                    <div class="expertise-section">
+                        <h3>ความเชี่ยวชาญของเรา</h3>
+                        
+                        <h4>ด้านกฎหมาย:</h4>
+                        <ul class="expertise-list">
+                            <li>กฎหมายธุรกิจและการค้าระหว่างประเทศ</li>
+                            <li>กฎหมายที่เกี่ยวข้องกับชาวต่างชาติในประเทศไทย</li>
+                            <li>กฎหมายอสังหาริมทรัพย์</li>
+                            <li>กฎหมายครอบครัวและมรดก</li>
+                            <li>กฎหมายดิจิทัลและเทคโนโลยีสารสนเทศ</li>
+                            <li>กฎหมายแพ่ง อาญา</li>
+                            <li>กฎหมายปกครอง</li>
+                            <li>คดีวินัย และคดีอาญาทุจริต</li>
+                        </ul>
+                        
+                        <h4>ด้านเทคโนโลยี:</h4>
+                        <ul class="expertise-list">
+                            <li>จำหน่ายและติดตั้งระบบทำความเย็นและระบบไฟฟ้า</li>
+                            <li>บริการบำรุงรักษาโดยทีมงานผู้เชี่ยวชาญ</li>
+                            <li>ให้คำปรึกษาเพื่อการใช้พลังงานอย่างมีประสิทธิภาพ</li>
+                        </ul>
+                        
+                        <h4>ด้านศิลปะวัฒนธรรม:</h4>
+                        <ul class="expertise-list">
+                            <li>จำหน่ายผลิตภัณฑ์ศิลปะวัฒนธรรมไทย</li>
+                            <li>งานฝีมือประณีตที่ผสมผสานความร่วมสมัยกับเอกลักษณ์ทางวัฒนธรรม</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="core-values">
+                        <h4>หลักการดำเนินงานของเรา</h4>
+                        <p>ด้วยทีมงานผู้ทรงคุณวุฒิและมากประสบการณ์ เราพร้อมเป็นพันธมิตรเชิงกลยุทธ์เพื่อความสำเร็จที่ยั่งยืนขององค์กรท่าน โดยยึดหลัก <strong>"นวัตกรรม คุณภาพ ซื่อสัตย์ โปร่งใส มีจริยธรรมทางธุรกิจที่เข้มแข็ง"</strong> เป็นแกนหลักในการดำเนินงาน</p>
+                    </div>
                 </div>
             </div>
         </div>
