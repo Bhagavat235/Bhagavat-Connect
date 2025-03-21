@@ -7,421 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Prompt:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-    :root {
-    --primary-color: #c10000;
-    --primary-color-rgb: 193, 0, 0;
-    --secondary-color: #ff3333;
-    --accent-color: #870000;
-    --text-color: #333;
-    --light-color: #f5f5f5;
-    --dark-color: #4d0000;
-}
-        }
-        
-       * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Rajdhani', 'Kanit', 'Prompt', sans-serif;
-}
-        
-        body {
-            color: var(--text-color);
-            background-color: var(--light-color);
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header Styles */
-        header {
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo h1 {
-            font-size: 1.8rem;
-            color: var(--primary-color);
-            margin-left: 10px;
-        }
-        
-        .logo span {
-            font-size: 1rem;
-            color: var(--secondary-color);
-            display: block;
-        }
-        
-        .logo img {
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: 10px;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        nav ul li {
-            margin-left: 30px;
-        }
-        
-        nav ul li a {
-            color: var(--text-color);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        nav ul li a:hover {
-            color: var(--primary-color);
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
-            color: white;
-            padding: 150px 0 100px;
-            text-align: center;
-        }
-        
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 30px;
-        }
-        
-        .btn {
-            display: inline-block;
-            background-color: white;
-            color: var(--primary-color);
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-        
-        .btn:hover {
-            background-color: var(--accent-color);
-            color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        
-        /* Services Section */
-        .services {
-            padding: 80px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        
-        .section-title h2 {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-        
-        .section-title p {
-            max-width: 700px;
-            margin: 0 auto;
-            color: var(--text-color);
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .service-card {
-            background-color: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-        }
-        
-        .service-icon {
-            height: 200px;
-            background-color: var(--secondary-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .service-icon::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(var(--primary-color-rgb, 193, 0, 0), 0.3);
-            z-index: 1;
-        }
-        
-        .service-content {
-            padding: 30px;
-        }
-        
-        .service-content h3 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-        
-        /* About Section */
-        .about {
-            padding: 80px 0;
-            background-color: white;
-        }
-        
-        .about-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 50px;
-            align-items: center;
-        }
-        
-        .about-image {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        .about-text h2 {
-            color: var(--primary-color);
-            margin-bottom: 20px;
-            font-size: 2rem;
-        }
-        
-        .about-text p {
-            margin-bottom: 20px;
-        }
-        
-        .expertise-section {
-            margin-top: 40px;
-        }
-        
-        .expertise-section h3 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-        }
-        
-        .expertise-list {
-            padding-left: 20px;
-            margin-bottom: 20px;
-        }
-        
-        .expertise-list li {
-            margin-bottom: 8px;
-        }
-        
-        .core-values {
-            margin-top: 30px;
-            padding: 20px;
-            background-color: var(--light-color);
-            border-radius: 10px;
-            border-left: 4px solid var(--primary-color);
-        }
-        
-        .core-values h4 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
-        
-        /* Contact Section */
-        .contact {
-            padding: 80px 0;
-            background-color: var(--light-color);
-        }
-        
-        .contact-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 50px;
-        }
-        
-        .contact-info h3 {
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-        
-        .contact-info p {
-            margin-bottom: 15px;
-        }
-        
-        .contact-info-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 20px;
-        }
-        
-        .contact-icon {
-            min-width: 40px;
-            height: 40px;
-            background-color: var(--primary-color);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            margin-right: 15px;
-        }
-        
-        .contact-form {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            color: var(--text-color);
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-        
-        textarea.form-control {
-            height: 120px;
-            resize: vertical;
-        }
-        
-        .submit-btn {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            font-size: 1rem;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .submit-btn:hover {
-            background-color: var(--accent-color);
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--dark-color);
-            color: white;
-            padding: 50px 0 20px;
-            text-align: center;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            margin-bottom: 30px;
-        }
-        
-        .footer-links li {
-            margin: 0 15px;
-        }
-        
-        .footer-links a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-links a:hover {
-            color: var(--secondary-color);
-        }
-        
-        .copyright {
-            font-size: 0.9rem;
-            color: rgba(255,255,255,0.7);
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            nav ul {
-                margin-top: 20px;
-                justify-content: center;
-            }
-            
-            nav ul li {
-                margin: 0 10px;
-            }
-            
-            .hero h2 {
-                font-size: 2rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-            }
-            
-            .expertise-section {
-                margin-top: 30px;
-            }
-        }
-    </style>
+    <!-- ส่วน CSS อยู่ในไฟล์แยกต่างหาก -->
 </head>
 <body>
     <!-- Header -->
@@ -433,11 +19,15 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#home">หน้าหลัก</a></li>
-                    <li><a href="#services">บริการ</a></li>
-                    <li><a href="#about">เกี่ยวกับเรา</a></li>
-                    <li><a href="#contact">ติดต่อ</a></li>
+                    <li><a href="#home" class="nav-link" lang="th">หน้าหลัก</a><a href="#home" class="nav-link" lang="en">Home</a></li>
+                    <li><a href="#services" class="nav-link" lang="th">บริการ</a><a href="#services" class="nav-link" lang="en">Services</a></li>
+                    <li><a href="#about" class="nav-link" lang="th">เกี่ยวกับเรา</a><a href="#about" class="nav-link" lang="en">About Us</a></li>
+                    <li><a href="#contact" class="nav-link" lang="th">ติดต่อ</a><a href="#contact" class="nav-link" lang="en">Contact</a></li>
                 </ul>
+                <div class="language-switcher">
+                    <button class="language-btn active" data-lang="th">TH</button>
+                    <button class="language-btn" data-lang="en">EN</button>
+                </div>
             </nav>
         </div>
     </header>
@@ -445,68 +35,103 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
-            <h2>ยินดีต้อนรับสู่ ภควัต คอนเนคท์</h2>
-            <p>เชื่อมต่อโลกธุรกิจของคุณด้วยโซลูชั่นที่ล้ำสมัย พร้อมประสบการณ์และความเชี่ยวชาญที่จะพาธุรกิจของคุณไปสู่ความสำเร็จ</p>
-            <a href="#contact" class="btn">ติดต่อเรา</a>
+            <h2 lang="th">ยินดีต้อนรับสู่ ภควัต คอนเนคท์</h2>
+            <h2 lang="en">Welcome to Bhagavat Connect</h2>
+            
+            <p lang="th">เชื่อมต่อโลกธุรกิจของคุณด้วยโซลูชั่นที่ล้ำสมัย พร้อมประสบการณ์และความเชี่ยวชาญที่จะพาธุรกิจของคุณไปสู่ความสำเร็จ</p>
+            <p lang="en">Connect your business with advanced solutions, backed by experience and expertise that will lead your business to success</p>
+            
+            <a href="#contact" class="btn" lang="th">ติดต่อเรา</a>
+            <a href="#contact" class="btn" lang="en">Contact Us</a>
         </div>
     </section>
 
     <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
-           <div class="section-title">
-    <h2>บริการของเรา</h2>
-    <p>บริษัท ภควัต คอนเนคท์ จำกัด ให้บริการที่หลากหลายทั้งด้านกฎหมาย และเทคโนโลยีต่างๆ</p>
-</div>
-          <div class="services-grid">
-    <div class="service-card">
-        <div class="service-icon" style="background: url('/api/placeholder/400/320') center/cover; color: transparent;">
-            LAW
+            <div class="section-title">
+                <h2 lang="th">บริการของเรา</h2>
+                <h2 lang="en">Our Services</h2>
+                
+                <p lang="th">บริษัท ภควัต คอนเนคท์ จำกัด ให้บริการที่หลากหลายทั้งด้านกฎหมาย และเทคโนโลยีต่างๆ</p>
+                <p lang="en">Bhagavat Connect Co., Ltd. offers a variety of services in legal consultancy and technology solutions</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon" style="background: url('/api/placeholder/400/320') center/cover; color: transparent;">
+                        LAW
+                    </div>
+                    <div class="service-content">
+                        <h3 lang="th">ที่ปรึกษากฎหมาย</h3>
+                        <h3 lang="en">Legal Consultancy</h3>
+                        
+                        <p lang="th">ให้บริการด้านกฎหมายธุรกิจและการค้าระหว่างประเทศ กฎหมายที่เกี่ยวข้องกับชาวต่างชาติในประเทศไทย กฎหมายอสังหาริมทรัพย์ กฎหมายครอบครัวและมรดก การระงับข้อพิพาท คดีปกครอง คดีอาญา-แพ่ง และกฎหมายเกี่ยวกับดิจิทัลและเทคโนโลยี</p>
+                        <p lang="en">We provide legal services in business and international trade law, laws related to foreigners in Thailand, real estate law, family and inheritance law, dispute resolution, administrative cases, criminal and civil cases, and digital and technology law.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon" style="background: url('/api/placeholder/400/320') center/cover; color: transparent;">
+                        AC
+                    </div>
+                    <div class="service-content">
+                        <h3 lang="th">จำหน่ายและบริการเครื่องปรับอากาศ</h3>
+                        <h3 lang="en">Air Conditioning Sales & Service</h3>
+                        
+                        <p lang="th">จำหน่ายเครื่องปรับอากาศคุณภาพสูงทุกยี่ห้อ พร้อมบริการติดตั้งและบำรุงรักษาโดยทีมช่างผู้เชี่ยวชาญ รับประกันผลงาน มีบริการหลังการขายที่ดีเยี่ยม</p>
+                        <p lang="en">We sell high-quality air conditioners of all brands, with installation and maintenance services by a team of experts. We guarantee our work and provide excellent after-sales service.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon" style="background: url('/api/placeholder/400/320') center/cover; color: transparent;">
+                        HOME
+                    </div>
+                    <div class="service-content">
+                        <h3 lang="th">จำหน่ายเครื่องใช้ไฟฟ้าในครัวเรือน</h3>
+                        <h3 lang="en">Household Appliances</h3>
+                        
+                        <p lang="th">ร้านขายปลีกเครื่องใช้ไฟฟ้าชนิดในครัวเรือนที่มีสินค้าหลากหลาย ราคาเป็นมิตร บริการหลังการขายเป็นเลิศ รับประกันสินค้าตามมาตรฐาน</p>
+                        <p lang="en">Retail shop for household electrical appliances with a wide range of products, friendly prices, excellent after-sales service, and standard product warranty.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="service-content">
-            <h3>ที่ปรึกษากฎหมาย</h3>
-            <p>ให้บริการด้านกฎหมายธุรกิจและการค้าระหว่างประเทศ กฎหมายที่เกี่ยวข้องกับชาวต่างชาติในประเทศไทย กฎหมายอสังหาริมทรัพย์ กฎหมายครอบครัวและมรดก การระงับข้อพิพาท คดีปกครอง คดีอาญา-แพ่ง และกฎหมายเกี่ยวกับดิจิทัลและเทคโนโลยี</p>
-        </div>
-    </div>
-    <div class="service-card">
-        <div class="service-icon" style="background: url('/api/placeholder/400/320') center/cover; color: transparent;">
-            AC
-        </div>
-        <div class="service-content">
-            <h3>จำหน่ายและบริการเครื่องปรับอากาศ</h3>
-            <p>จำหน่ายเครื่องปรับอากาศคุณภาพสูงทุกยี่ห้อ พร้อมบริการติดตั้งและบำรุงรักษาโดยทีมช่างผู้เชี่ยวชาญ รับประกันผลงาน มีบริการหลังการขายที่ดีเยี่ยม</p>
-        </div>
-    </div>
-    <div class="service-card">
-        <div class="service-icon" style="background: url('/api/placeholder/400/320') center/cover; color: transparent;">
-            HOME
-        </div>
-        <div class="service-content">
-            <h3>จำหน่ายเครื่องใช้ไฟฟ้าในครัวเรือน</h3>
-            <p>ร้านขายปลีกเครื่องใช้ไฟฟ้าชนิดในครัวเรือนที่มีสินค้าหลากหลาย ราคาเป็นมิตร บริการหลังการขายเป็นเลิศ รับประกันสินค้าตามมาตรฐาน</p>
-        </div>
-    </div>
-</div>
     </section>
 
-    <!-- About Section -->
+    <!-- About Section อยู่ในไฟล์ Part 2 -->
+    <!-- Contact Section และ Footer อยู่ในไฟล์ Part 3 -->
+    <!-- JavaScript อยู่ในไฟล์ Part 4 -->
+    
+</body>
+</html>
+<!-- About Section -->
     <section class="about" id="about">
         <div class="container">
             <div class="about-content">
                 <div class="about-image">
-                    <div style="height: 320px; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; font-weight: bold;">
-                        ภควัต<br>คอนเนคท์
+                    <div style="height: 320px; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; font-weight: bold; text-align: center;">
+                        <div lang="th">ภควัต<br>คอนเนคท์</div>
+                        <div lang="en">Bhagavat<br>Connect</div>
                     </div>
                 </div>
+                
                 <div class="about-text">
-                    <h2>เกี่ยวกับเรา</h2>
-                    <p>บริษัท ภควัต คอนเนคท์ จำกัด (Bhagavat Connect Co., Ltd.) ก่อตั้งขึ้นด้วยวิสัยทัศน์ในการเชื่อมโยงธุรกิจ กฎหมาย ศิลปะวัฒนธรรม และเทคโนโลยีดิจิทัลอย่างมีประสิทธิภาพ เรามุ่งนำเสนอทางออกเชิงระบบคุณภาพสูงที่ตอบโจทย์ความต้องการเฉพาะของลูกค้าทุกประเภท</p>
+                    <h2 lang="th">เกี่ยวกับเรา</h2>
+                    <h2 lang="en">About Us</h2>
+                    
+                    <p lang="th">บริษัท ภควัต คอนเนคท์ จำกัด (Bhagavat Connect Co., Ltd.) ก่อตั้งขึ้นด้วยวิสัยทัศน์ในการเชื่อมโยงธุรกิจ กฎหมาย ศิลปะวัฒนธรรม และเทคโนโลยีดิจิทัลอย่างมีประสิทธิภาพ เรามุ่งนำเสนอทางออกเชิงระบบคุณภาพสูงที่ตอบโจทย์ความต้องการเฉพาะของลูกค้าทุกประเภท</p>
+                    <p lang="en">Bhagavat Connect Co., Ltd. was founded with a vision to efficiently connect business, law, arts, culture, and digital technology. We aim to offer high-quality systematic solutions that meet the specific needs of all types of customers.</p>
                     
                     <div class="expertise-section">
-                        <h3>ความเชี่ยวชาญของเรา</h3>
+                        <h3 lang="th">ความเชี่ยวชาญของเรา</h3>
+                        <h3 lang="en">Our Expertise</h3>
                         
-                        <h4>ด้านกฎหมาย:</h4>
-                        <ul class="expertise-list">
+                        <h4 lang="th">ด้านกฎหมาย:</h4>
+                        <h4 lang="en">Legal Services:</h4>
+                        
+                        <ul class="expertise-list" lang="th">
                             <li>กฎหมายธุรกิจและการค้าระหว่างประเทศ</li>
                             <li>กฎหมายที่เกี่ยวข้องกับชาวต่างชาติในประเทศไทย</li>
                             <li>กฎหมายอสังหาริมทรัพย์</li>
@@ -517,50 +142,86 @@
                             <li>คดีวินัย และคดีอาญาทุจริต</li>
                         </ul>
                         
-                        <h4>ด้านเทคโนโลยี:</h4>
-                        <ul class="expertise-list">
+                        <ul class="expertise-list" lang="en">
+                            <li>Business and international trade law</li>
+                            <li>Laws related to foreigners in Thailand</li>
+                            <li>Real estate law</li>
+                            <li>Family and inheritance law</li>
+                            <li>Digital and information technology law</li>
+                            <li>Civil and criminal law</li>
+                            <li>Administrative law</li>
+                            <li>Disciplinary cases and corruption criminal cases</li>
+                        </ul>
+                        
+                        <h4 lang="th">ด้านเทคโนโลยี:</h4>
+                        <h4 lang="en">Technology Services:</h4>
+                        
+                        <ul class="expertise-list" lang="th">
                             <li>จำหน่ายและติดตั้งระบบทำความเย็นและระบบไฟฟ้า</li>
                             <li>บริการบำรุงรักษาโดยทีมงานผู้เชี่ยวชาญ</li>
                             <li>ให้คำปรึกษาเพื่อการใช้พลังงานอย่างมีประสิทธิภาพ</li>
                         </ul>
                         
-                        <h4>ด้านศิลปะวัฒนธรรม:</h4>
-                        <ul class="expertise-list">
+                        <ul class="expertise-list" lang="en">
+                            <li>Sales and installation of cooling systems and electrical systems</li>
+                            <li>Maintenance services by a team of experts</li>
+                            <li>Consultation for efficient energy usage</li>
+                        </ul>
+                        
+                        <h4 lang="th">ด้านศิลปะวัฒนธรรม:</h4>
+                        <h4 lang="en">Arts and Culture:</h4>
+                        
+                        <ul class="expertise-list" lang="th">
                             <li>จำหน่ายผลิตภัณฑ์ศิลปะวัฒนธรรมไทย</li>
                             <li>งานฝีมือประณีตที่ผสมผสานความร่วมสมัยกับเอกลักษณ์ทางวัฒนธรรม</li>
+                        </ul>
+                        
+                        <ul class="expertise-list" lang="en">
+                            <li>Sales of Thai arts and cultural products</li>
+                            <li>Fine craftsmanship that combines contemporary styles with cultural identity</li>
                         </ul>
                     </div>
                     
                     <div class="core-values">
-                        <h4>หลักการดำเนินงานของเรา</h4>
-                        <p>ด้วยทีมงานผู้ทรงคุณวุฒิและมากประสบการณ์ เราพร้อมเป็นพันธมิตรเชิงกลยุทธ์เพื่อความสำเร็จที่ยั่งยืนขององค์กรท่าน โดยยึดหลัก <strong>"นวัตกรรม คุณภาพ ซื่อสัตย์ โปร่งใส มีจริยธรรมทางธุรกิจที่เข้มแข็ง"</strong> เป็นแกนหลักในการดำเนินงาน</p>
+                        <h4 lang="th">หลักการดำเนินงานของเรา</h4>
+                        <h4 lang="en">Our Operational Principles</h4>
+                        
+                        <p lang="th">ด้วยทีมงานผู้ทรงคุณวุฒิและมากประสบการณ์ เราพร้อมเป็นพันธมิตรเชิงกลยุทธ์เพื่อความสำเร็จที่ยั่งยืนขององค์กรท่าน โดยยึดหลัก <strong>"นวัตกรรม คุณภาพ ซื่อสัตย์ โปร่งใส มีจริยธรรมทางธุรกิจที่เข้มแข็ง"</strong> เป็นแกนหลักในการดำเนินงาน</p>
+                        <p lang="en">With a team of qualified and experienced professionals, we are ready to be your strategic partner for sustainable organizational success. We adhere to the principles of <strong>"Innovation, Quality, Honesty, Transparency, and Strong Business Ethics"</strong> as the core of our operations.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Contact Section -->
+<!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-title">
-                <h2>ติดต่อเรา</h2>
-                <p>หากคุณสนใจบริการของเราหรือมีข้อสงสัยใดๆ โปรดติดต่อเราได้ตามช่องทางด้านล่าง</p>
+                <h2 lang="th">ติดต่อเรา</h2>
+                <h2 lang="en">Contact Us</h2>
+                
+                <p lang="th">หากคุณสนใจบริการของเราหรือมีข้อสงสัยใดๆ โปรดติดต่อเราได้ตามช่องทางด้านล่าง</p>
+                <p lang="en">If you are interested in our services or have any questions, please contact us through the channels below</p>
             </div>
+            
             <div class="contact-container">
                 <div class="contact-info">
-                    <h3>ข้อมูลติดต่อ</h3>
+                    <h3 lang="th">ข้อมูลติดต่อ</h3>
+                    <h3 lang="en">Contact Information</h3>
+                    
                     <div class="contact-info-item">
                         <div class="contact-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
                             </svg>
                         </div>
                         <div>
-                            <h4>ที่อยู่</h4>
+                            <h4 lang="th">ที่อยู่</h4>
+                            <h4 lang="en">Address</h4>
                             <p>224/235 โกลเด้นทาวน์ 2 รามอินทรา-วงแหวน<br>ถนนกาญจนาภิเษก แขวงท่าแร้ง<br>เขตบางเขน กรุงเทพฯ 10220</p>
                         </div>
                     </div>
+                    
                     <div class="contact-info-item">
                         <div class="contact-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -568,10 +229,12 @@
                             </svg>
                         </div>
                         <div>
-                            <h4>โทรศัพท์</h4>
+                            <h4 lang="th">โทรศัพท์</h4>
+                            <h4 lang="en">Phone</h4>
                             <p>+66 9 5639 3253</p>
                         </div>
                     </div>
+                    
                     <div class="contact-info-item">
                         <div class="contact-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -579,31 +242,44 @@
                             </svg>
                         </div>
                         <div>
-                            <h4>อีเมล</h4>
+                            <h4 lang="th">อีเมล</h4>
+                            <h4 lang="en">Email</h4>
                             <p>bhagavat235@gmail.com</p>
                         </div>
                     </div>
                 </div>
+                
                 <div class="contact-form">
-                    <h3>ส่งข้อความถึงเรา</h3>
+                    <h3 lang="th">ส่งข้อความถึงเรา</h3>
+                    <h3 lang="en">Send us a message</h3>
+                    
                     <form>
                         <div class="form-group">
-                            <label for="name">ชื่อ-นามสกุล</label>
+                            <label for="name" lang="th">ชื่อ-นามสกุล</label>
+                            <label for="name" lang="en">Full Name</label>
                             <input type="text" id="name" class="form-control" required>
                         </div>
+                        
                         <div class="form-group">
-                            <label for="email">อีเมล</label>
+                            <label for="email" lang="th">อีเมล</label>
+                            <label for="email" lang="en">Email</label>
                             <input type="email" id="email" class="form-control" required>
                         </div>
+                        
                         <div class="form-group">
-                            <label for="subject">หัวข้อ</label>
+                            <label for="subject" lang="th">หัวข้อ</label>
+                            <label for="subject" lang="en">Subject</label>
                             <input type="text" id="subject" class="form-control" required>
                         </div>
+                        
                         <div class="form-group">
-                            <label for="message">ข้อความ</label>
+                            <label for="message" lang="th">ข้อความ</label>
+                            <label for="message" lang="en">Message</label>
                             <textarea id="message" class="form-control" required></textarea>
                         </div>
-                        <button type="submit" class="submit-btn">ส่งข้อความ</button>
+                        
+                        <button type="submit" class="submit-btn" lang="th">ส่งข้อความ</button>
+                        <button type="submit" class="submit-btn" lang="en">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -614,15 +290,507 @@
     <footer>
         <div class="container">
             <ul class="footer-links">
-                <li><a href="#home">หน้าหลัก</a></li>
-                <li><a href="#services">บริการ</a></li>
-                <li><a href="#about">เกี่ยวกับเรา</a></li>
-                <li><a href="#contact">ติดต่อ</a></li>
+                <li><a href="#home" lang="th">หน้าหลัก</a><a href="#home" lang="en">Home</a></li>
+                <li><a href="#services" lang="th">บริการ</a><a href="#services" lang="en">Services</a></li>
+                <li><a href="#about" lang="th">เกี่ยวกับเรา</a><a href="#about" lang="en">About Us</a></li>
+                <li><a href="#contact" lang="th">ติดต่อ</a><a href="#contact" lang="en">Contact</a></li>
             </ul>
-            <div class="copyright">
+            
+            <div class="copyright" lang="th">
                 &copy; 2025 บริษัท ภควัต คอนเนคท์ จำกัด. สงวนลิขสิทธิ์.
+            </div>
+            <div class="copyright" lang="en">
+                &copy; 2025 Bhagavat Connect Co., Ltd. All rights reserved.
             </div>
         </div>
     </footer>
-</body>
-</html>
+<!-- CSS ในส่วน head ของไฟล์ HTML -->
+<style>
+    :root {
+        --primary-color: #c10000;
+        --primary-color-rgb: 193, 0, 0;
+        --secondary-color: #ff3333;
+        --accent-color: #870000;
+        --text-color: #333;
+        --light-color: #f5f5f5;
+        --dark-color: #4d0000;
+    }
+        
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Rajdhani', 'Kanit', 'Prompt', sans-serif;
+    }
+        
+    body {
+        color: var(--text-color);
+        background-color: var(--light-color);
+        line-height: 1.6;
+    }
+        
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+        
+    /* Header Styles */
+    header {
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
+        
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+    }
+        
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+        
+    .logo h1 {
+        font-size: 1.8rem;
+        color: var(--primary-color);
+        margin-left: 10px;
+    }
+        
+    .logo span {
+        font-size: 1rem;
+        color: var(--secondary-color);
+        display: block;
+    }
+    
+    .logo img {
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 10px;
+    }
+        
+    nav ul {
+        display: flex;
+        list-style: none;
+    }
+        
+    nav ul li {
+        margin-left: 30px;
+    }
+        
+    nav ul li a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+        
+    nav ul li a:hover {
+        color: var(--primary-color);
+    }
+    
+    /* Language Switcher */
+    .language-switcher {
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+    }
+    
+    .language-btn {
+        background-color: transparent;
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        transition: all 0.3s;
+        border-radius: 4px;
+        margin: 0 5px;
+    }
+    
+    .language-btn:hover, .language-btn.active {
+        background-color: var(--primary-color);
+        color: white;
+    }
+        
+    /* Hero Section */
+/* Hero Section */
+    .hero {
+        background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+        color: white;
+        padding: 150px 0 100px;
+        text-align: center;
+    }
+        
+    .hero h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+        
+    .hero p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto 30px;
+    }
+        
+    .btn {
+        display: inline-block;
+        background-color: white;
+        color: var(--primary-color);
+        padding: 12px 30px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s;
+    }
+        
+    .btn:hover {
+        background-color: var(--accent-color);
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+        
+    /* Services Section */
+    .services {
+        padding: 80px 0;
+    }
+        
+    .section-title {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+        
+    .section-title h2 {
+        font-size: 2rem;
+        color: var(--primary-color);
+        margin-bottom: 15px;
+    }
+        
+    .section-title p {
+        max-width: 700px;
+        margin: 0 auto;
+        color: var(--text-color);
+    }
+        
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+        
+    .service-card {
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+        
+    .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+        
+    .service-icon {
+        height: 200px;
+        background-color: var(--secondary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        color: white;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .service-icon::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(var(--primary-color-rgb), 0.3);
+        z-index: 1;
+    }
+        
+    .service-content {
+        padding: 30px;
+    }
+        
+    .service-content h3 {
+        color: var(--primary-color);
+        margin-bottom: 15px;
+    }
+        
+    /* About Section */
+    .about {
+        padding: 80px 0;
+        background-color: white;
+    }
+        
+    .about-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 50px;
+        align-items: center;
+    }
+        
+    .about-image {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+        
+    .about-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+        
+    .about-text h2 {
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        font-size: 2rem;
+    }
+        
+    .about-text p {
+        margin-bottom: 20px;
+    }
+        
+    .expertise-section {
+        margin-top: 40px;
+    }
+        
+    .expertise-section h3 {
+        color: var(--primary-color);
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+    }
+        
+    .expertise-list {
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+        
+    .expertise-list li {
+        margin-bottom: 8px;
+    }
+        
+    .core-values {
+        margin-top: 30px;
+        padding: 20px;
+        background-color: var(--light-color);
+        border-radius: 10px;
+        border-left: 4px solid var(--primary-color);
+    }
+        
+    .core-values h4 {
+        color: var(--primary-color);
+        margin-bottom: 10px;
+    }
+        
+    /* Contact Section */
+    .contact {
+        padding: 80px 0;
+        background-color: var(--light-color);
+    }
+        
+    .contact-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 50px;
+    }
+        
+    .contact-info h3 {
+        color: var(--primary-color);
+        margin-bottom: 20px;
+    }
+        
+    .contact-info p {
+        margin-bottom: 15px;
+    }
+        
+    .contact-info-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+        
+    .contact-icon {
+        min-width: 40px;
+        height: 40px;
+        background-color: var(--primary-color);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        margin-right: 15px;
+    }
+        
+    .contact-form {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+        
+    .form-group {
+        margin-bottom: 20px;
+    }
+        
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--text-color);
+    }
+        
+    .form-control {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+        
+    textarea.form-control {
+        height: 120px;
+        resize: vertical;
+    }
+        
+    .submit-btn {
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        font-size: 1rem;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+        
+    .submit-btn:hover {
+        background-color: var(--accent-color);
+    }
+        
+    /* Footer */
+    footer {
+        background-color: var(--dark-color);
+        color: white;
+        padding: 50px 0 20px;
+        text-align: center;
+    }
+        
+    .footer-links {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        margin-bottom: 30px;
+    }
+        
+    .footer-links li {
+        margin: 0 15px;
+    }
+        
+    .footer-links a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+        
+    .footer-links a:hover {
+        color: var(--secondary-color);
+    }
+        
+    .copyright {
+        font-size: 0.9rem;
+        color: rgba(255,255,255,0.7);
+    }
+    
+    /* Multilingual Support */
+    [lang="en"] {
+        display: none;
+    }
+        
+    /* Responsive */
+    @media (max-width: 768px) {
+        .header-container {
+            flex-direction: column;
+            text-align: center;
+        }
+            
+        nav ul {
+            margin-top: 20px;
+            justify-content: center;
+        }
+            
+        nav ul li {
+            margin: 0 10px;
+        }
+            
+        .hero h2 {
+            font-size: 2rem;
+        }
+            
+        .hero p {
+            font-size: 1rem;
+        }
+            
+        .expertise-section {
+            margin-top: 30px;
+        }
+        
+        .language-switcher {
+            margin: 15px 0 0;
+        }
+    }
+</style>
+
+<!-- JavaScript for Language Switching - Add at the bottom of the HTML file before the closing </body> tag -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get language buttons
+        const langButtons = document.querySelectorAll('.language-btn');
+        
+        // Add click event listeners to language buttons
+        langButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const lang = this.getAttribute('data-lang');
+                switchLanguage(lang);
+                
+                // Update active button
+                langButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+        
+        // Function to switch language
+        function switchLanguage(lang) {
+            // Set the html lang attribute
+            document.documentElement.lang = lang;
+            
+            // Hide all language elements
+            document.querySelectorAll('[lang]').forEach(el => {
+                el.style.display = 'none';
+            });
+            
+            // Show elements with the selected language
+            document.querySelectorAll(`[lang="${lang}"]`).forEach(el => {
+                el.style.display = '';
+            });
+        }
+        
+        // Initialize with Thai language (already set in CSS)
+        document.querySelectorAll('[lang="th"]').forEach(el => {
+            el.style.display = '';
+        });
+    });
+</script>
