@@ -284,7 +284,6 @@ header {
 .hero {
     position: relative;
     background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
-background-color: rgba(150, 0, 0, 0.3)
     color: var(--white);
     padding: 180px 0 100px;
     text-align: center;
