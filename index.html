@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
     <meta charset="UTF-8">
@@ -8,8 +9,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Prompt:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <!-- เพิ่มไฟล์ CSS ใหม่สำหรับแก้ไขปัญหาภาษาและการแสดงผล -->
+    <link rel="stylesheet" href="css/language-fix.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="js/script.js"></script>
+</head>
+<body>
+    <!-- สคริปต์ฉุกเฉินเพื่อซ่อนภาษาอังกฤษตั้งแต่เริ่มต้น -->
+    <script>
+        // กำหนดภาษาเริ่มต้นเป็นภาษาไทย
+        document.documentElement.lang = 'th';
+        
+        // ซ่อนเนื้อหาภาษาอังกฤษทันที
+        document.addEventListener('DOMContentLoaded', function() {
+            // ใช้ CSS เป็นหลักในการซ่อน/แสดงเนื้อหา ตามที่กำหนดใน language-fix.css
+            console.log('Initial language set to Thai');
+        });
+    </script>
+    
+    <!-- ส่วนที่เหลือของเนื้อหา HTML -->
     <style>
         /* เพิ่ม CSS เพื่อปรับปรุงการแสดงผลบนมือถือ */
         @media (max-width: 768px) {
