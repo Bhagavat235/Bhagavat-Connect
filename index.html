@@ -11,6 +11,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="js/script.js"></script>
     <style>
+<style>
+    /* เพิ่มเงาเล็กน้อยให้กับข้อความหัวข้อ */
+    .hero h2 {
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4) !important;
+    }
+    /* เพิ่มเงาเล็กน้อยให้กับข้อความข้างใต้ */
+    .hero p {
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) !important;
+    }
+    /* สำหรับมือถือขนาดเล็ก */
+    @media (max-width: 480px) {
+        .hero h2 {
+            font-size: 22px !important;
+            margin-bottom: 15px !important;
+        }
+        .hero p {
+            font-size: 15px !important;
+            line-height: 1.5 !important;
+        }
+    }
+</style>
         /* เพิ่ม CSS เพื่อปรับปรุงการแสดงผลบนมือถือ */
         @media (max-width: 768px) {
             .hero-content h2 {
