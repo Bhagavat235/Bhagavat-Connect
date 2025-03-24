@@ -1,0 +1,64 @@
+/* แก้ไขการแสดงผลภาษา */
+[lang="en"] {
+    display: none !important;
+}
+
+[lang="th"] {
+    display: block !important;
+}
+
+/* กรณีพิเศษสำหรับ inline elements */
+span[lang="th"], a[lang="th"], button[lang="th"] {
+    display: inline-block !important;
+}
+
+/* กรณีพิเศษสำหรับ list items */
+li[lang="th"] {
+    display: list-item !important;
+}
+
+/* กำหนดรูปภาพให้แสดงเต็ม */
+.responsive-image, .member-img img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    max-height: none !important; /* ยกเลิกการจำกัดความสูงสูงสุด */
+}
+
+/* ปรับ team member section ให้มีขนาดที่เหมาะสม */
+.team-member {
+    width: 100%;
+    margin: 0 auto 20px;
+}
+
+/* สำหรับการแสดงผลบนมือถือ */
+@media screen and (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .member-img {
+        max-height: none !important;
+        text-align: center;
+    }
+    
+    .responsive-image, .member-img img {
+        max-width: 100% !important;
+        max-height: none !important;
+    }
+    
+    /* ซ่อนข้อความภาษาอังกฤษบนมือถือ */
+    [lang="en"] {
+        display: none !important;
+    }
+    
+    /* แสดงข้อความภาษาไทยบนมือถือ */
+    [lang="th"] {
+        display: block !important;
+    }
+    
+    /* สำหรับ inline elements */
+    span[lang="th"], a[lang="th"], button[lang="th"] {
+        display: inline-block !important;
+    }
+}
