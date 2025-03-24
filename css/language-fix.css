@@ -1,0 +1,76 @@
+/* ไฟล์ CSS ใหม่สำหรับแก้ไขปัญหา */
+
+/* ซ่อนทุกองค์ประกอบภาษาอังกฤษโดยค่าเริ่มต้น (มีผลเมื่อภาษาที่ใช้คือภาษาไทย) */
+[lang="en"] {
+    display: none !important;
+}
+
+/* เมื่อกำหนดให้ HTML มี lang="en" ให้ซ่อนภาษาไทยและแสดงภาษาอังกฤษ */
+html[lang="en"] [lang="th"] {
+    display: none !important;
+}
+
+html[lang="en"] [lang="en"] {
+    display: block !important;
+}
+
+/* เมื่อกำหนดให้ HTML มี lang="th" ให้ซ่อนภาษาอังกฤษและแสดงภาษาไทย */
+html[lang="th"] [lang="en"] {
+    display: none !important;
+}
+
+html[lang="th"] [lang="th"] {
+    display: block !important;
+}
+
+/* กรณีพิเศษสำหรับ inline elements เมื่อภาษาที่ใช้คือภาษาอังกฤษ */
+html[lang="en"] span[lang="en"],
+html[lang="en"] a[lang="en"],
+html[lang="en"] button[lang="en"] {
+    display: inline-block !important;
+}
+
+/* กรณีพิเศษสำหรับ inline elements เมื่อภาษาที่ใช้คือภาษาไทย */
+html[lang="th"] span[lang="th"],
+html[lang="th"] a[lang="th"],
+html[lang="th"] button[lang="th"] {
+    display: inline-block !important;
+}
+
+/* กรณีพิเศษสำหรับ list items */
+html[lang="en"] li[lang="en"] {
+    display: list-item !important;
+}
+
+html[lang="th"] li[lang="th"] {
+    display: list-item !important;
+}
+
+/* แก้ไขการแสดงรูปภาพให้เต็ม */
+.responsive-image,
+.member-img img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    max-height: none !important;
+}
+
+/* สำหรับการแสดงผลบนมือถือ */
+@media screen and (max-width: 768px) {
+    .hero h2 {
+        font-size: 28px !important;
+    }
+    
+    .hero p {
+        font-size: 16px !important;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .team-member {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
