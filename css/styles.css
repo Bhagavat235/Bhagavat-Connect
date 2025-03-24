@@ -283,7 +283,7 @@ header {
 /* Hero Section */
 .hero {
     position: relative;
-    background: linear-gradient(135deg, var(--primary-color), var(--Dark-color));
+    background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
     color: var(--white);
     padding: 180px 0 100px;
     text-align: center;
@@ -1653,6 +1653,34 @@ textarea.form-control {
   }
 }
 
+/* สำหรับมือถือทั่วไป */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .responsive-image {
+    max-height: 350px;
+  }
+}
+
+/* สำหรับแท็บเล็ต */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* สำหรับแล็ปท็อปและเดสก์ท็อป */
+@media screen and (min-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .team-member {
+    max-width: 350px;
+  }
+}
 /* สำหรับมือถือทั่วไป */
 @media screen and (min-width: 481px) and (max-width: 767px) {
   .team-grid {
