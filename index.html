@@ -11,56 +11,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="js/script.js"></script>
     <style>
-<style>
-    /* เพิ่มเงาเล็กน้อยให้กับข้อความหัวข้อ */
-    .hero h2 {
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4) !important;
-    }
-    /* เพิ่มเงาเล็กน้อยให้กับข้อความข้างใต้ */
-    .hero p {
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) !important;
-    }
-    /* สำหรับมือถือขนาดเล็ก */
-    @media (max-width: 480px) {
-        .hero h2 {
-            font-size: 22px !important;
-            margin-bottom: 15px !important;
+        /* เพิ่ม CSS เพื่อปรับปรุงการแสดงผลบนมือถือ */
+        @media (max-width: 768px) {
+            .hero-content h2 {
+                font-size: 24px;
+            }
+            .services-grid, .portfolio-grid, .team-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-container {
+                flex-direction: column;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
         }
-        .hero p {
-            font-size: 15px !important;
-            line-height: 1.5 !important;
-        }
-    }
-</style>
     </style>
 </head>
-<!DOCTYPE html>
-<html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>บริษัท ภควัต คอนเนคท์ จำกัด (Bhagavat Connect Co., Ltd.)</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Prompt:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- เพิ่มไฟล์ CSS ใหม่สำหรับแก้ไขปัญหาภาษาและการแสดงผล -->
-    <link rel="stylesheet" href="css/language-fix.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="js/script.js"></script>
-</head>
-<body>
-    <!-- สคริปต์ฉุกเฉินเพื่อซ่อนภาษาอังกฤษตั้งแต่เริ่มต้น -->
-    <script>
-        // กำหนดภาษาเริ่มต้นเป็นภาษาไทย
-        document.documentElement.lang = 'th';
-        
-        // ซ่อนเนื้อหาภาษาอังกฤษทันที
-        document.addEventListener('DOMContentLoaded', function() {
-            // ใช้ CSS เป็นหลักในการซ่อน/แสดงเนื้อหา ตามที่กำหนดใน language-fix.css
-            console.log('Initial language set to Thai');
-        });
-    </script>
 <body>
     <!-- Header -->
     <header id="header">
@@ -354,41 +322,41 @@
     </section>
 
     <!-- Team Section -->
-<section class="team section-padding" id="team">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-subtitle" lang="th">ทีมงานของเรา</span>
-            <span class="section-subtitle" lang="en">Our Team</span>
-            <h2 class="section-title" lang="th">ผู้เชี่ยวชาญของเรา</h2>
-            <h2 class="section-title" lang="en">Our Experts</h2>
-            <p lang="th">ทีมงานมากประสบการณ์ที่พร้อมให้บริการอย่างมืออาชีพ</p>
-            <p lang="en">Our experienced team ready to provide professional services</p>
-        </div>
+    <section class="team section-padding" id="team">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle" lang="th">ทีมงานของเรา</span>
+                <span class="section-subtitle" lang="en">Our Team</span>
+                <h2 class="section-title" lang="th">ผู้เชี่ยวชาญของเรา</h2>
+                <h2 class="section-title" lang="en">Our Experts</h2>
+                <p lang="th">ทีมงานมากประสบการณ์ที่พร้อมให้บริการอย่างมืออาชีพ</p>
+                <p lang="en">Our experienced team ready to provide professional services</p>
+            </div>
 
-        <div class="team-container">
-            <div class="team-grid">
-                <div class="team-member">
-                    <div class="member-img">
-                        <img src="images/S__16957488.jpg" alt="นาย คหบดี คชาเสถ" class="responsive-image">
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h3 lang="th">นาย คหบดี คชาเสถ</h3>
-                        <h3 lang="en">Mr. Kahabordee Kachasat</h3>
-                        <span lang="th">หัวหน้าสำนักงานกฎหมายและทนายความ</span>
-                        <span lang="en">Head of Law Office and Attorney</span>
-                        <p lang="th">มีประสบการณ์ด้านกฎหมายกว่า 10 ปี</p>
-                        <p lang="en">Over 10 years of legal experience</p>
-                    </div>
+<div class="team-container">
+    <div class="team-grid">
+        <div class="team-member">
+            <div class="member-img">
+                <img src="images/S__16957488.jpg" alt="นาย คหบดี คชาเสถ" class="responsive-image">
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
+            </div>
+            <div class="member-info">
+                <h3 lang="th">นาย คหบดี คชาเสถ</h3>
+                <h3 lang="en">Mr. Kahabordee Kachasat</h3>
+                <span lang="th">หัวหน้าสำนักงานกฎหมายและทนายความ</span>
+                <span lang="en">Head of Law Office and Attorney</span>
+                <p lang="th">มีประสบการณ์ด้านกฎหมายกว่า 10 ปี</p>
+                <p lang="en">Over 10 years of legal experience</p>
             </div>
         </div>
     </div>
-</section>
+</div>
+    </section>
+
     <!-- FAQ Section -->
     <section class="faq section-padding">
         <div class="container">
