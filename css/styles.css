@@ -1681,3 +1681,57 @@ textarea.form-control {
     max-width: 350px;
   }
 }
+/* CSS เพื่อแก้ไขหัวข้อในส่วน Hero */
+
+/* ปรับปรุงหัวข้อให้อ่านง่ายขึ้น */
+.hero h2 {
+    font-size: 32px !important;
+    margin-bottom: 20px !important;
+    color: #ffffff !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) !important; /* เพิ่มเงาให้ตัวอักษร */
+    background-color: rgba(0, 0, 0, 0.2) !important; /* เพิ่มพื้นหลังโปร่งใส */
+    padding: 10px 15px !important;
+    border-radius: 8px !important;
+    display: inline-block !important;
+    max-width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* ปรับปรุงพื้นที่รอบหัวข้อ */
+.hero-content {
+    padding: 20px 15px !important;
+    background-color: rgba(150, 0, 0, 0.3) !important; /* เพิ่มพื้นหลังโปร่งใส */
+    border-radius: 10px !important;
+    max-width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* ปรับปรุงข้อความใต้หัวข้อ */
+.hero p {
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 25px !important;
+    color: #ffffff !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4) !important; /* เพิ่มเงาให้ตัวอักษร */
+    max-width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* สำหรับมือถือ */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 24px !important;
+        padding: 8px 12px !important;
+    }
+    
+    .hero p {
+        font-size: 16px !important;
+    }
+    
+    .hero-content {
+        padding: 15px 10px !important;
+    }
+}
