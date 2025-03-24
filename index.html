@@ -7,27 +7,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Prompt:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- ส่วน CSS อยู่ในไฟล์แยกต่างหาก -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Header -->
-    <header>
+    <header id="header">
         <div class="container header-container">
             <div class="logo">
-                <img src="S__16793609.jpg" alt="ภควัต คอนเนคท์ โลโก้" width="60" height="60">
+                <img src="images/logo.jpg" alt="ภควัต คอนเนคท์ โลโก้" width="60" height="60">
                 <h1>ภควัต คอนเนคท์<span>BHAGAVAT CONNECT</span></h1>
             </div>
             <nav>
-                <ul>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu">
                     <li><a href="#home" class="nav-link" lang="th">หน้าหลัก</a><a href="#home" class="nav-link" lang="en">Home</a></li>
                     <li><a href="#services" class="nav-link" lang="th">บริการ</a><a href="#services" class="nav-link" lang="en">Services</a></li>
+                    <li><a href="#portfolio" class="nav-link" lang="th">ผลงาน</a><a href="#portfolio" class="nav-link" lang="en">Portfolio</a></li>
                     <li><a href="#about" class="nav-link" lang="th">เกี่ยวกับเรา</a><a href="#about" class="nav-link" lang="en">About Us</a></li>
+                    <li><a href="#team" class="nav-link" lang="th">ทีมงาน</a><a href="#team" class="nav-link" lang="en">Our Team</a></li>
+                    <li><a href="#testimonials" class="nav-link" lang="th">ความคิดเห็น</a><a href="#testimonials" class="nav-link" lang="en">Testimonials</a></li>
                     <li><a href="#contact" class="nav-link" lang="th">ติดต่อ</a><a href="#contact" class="nav-link" lang="en">Contact</a></li>
+                    <li class="language-switcher">
+                        <button class="language-btn active" data-lang="th">TH</button>
+                        <button class="language-btn" data-lang="en">EN</button>
+                    </li>
                 </ul>
-                <div class="language-switcher">
-                    <button class="language-btn active" data-lang="th">TH</button>
-                    <button class="language-btn" data-lang="en">EN</button>
-                </div>
             </nav>
         </div>
     </header>
@@ -35,32 +44,76 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
-            <h2 lang="th">ยินดีต้อนรับสู่ ภควัต คอนเนคท์</h2>
-            <h2 lang="en">Welcome to Bhagavat Connect</h2>
-            
-            <p lang="th">เชื่อมต่อโลกธุรกิจของคุณด้วยโซลูชั่นที่ล้ำสมัย พร้อมประสบการณ์และความเชี่ยวชาญที่จะพาธุรกิจของคุณไปสู่ความสำเร็จ</p>
-            <p lang="en">Connect your business with advanced solutions, backed by experience and expertise that will lead your business to success</p>
-            
-            <a href="#contact" class="btn" lang="th">ติดต่อเรา</a>
-            <a href="#contact" class="btn" lang="en">Contact Us</a>
+            <div class="hero-content">
+                <h2 lang="th">ยินดีต้อนรับสู่ ภควัต คอนเนคท์</h2>
+                <h2 lang="en">Welcome to Bhagavat Connect</h2>
+                
+                <p lang="th">เชื่อมต่อโลกธุรกิจของคุณด้วยโซลูชั่นที่ล้ำสมัย พร้อมประสบการณ์และความเชี่ยวชาญที่จะพาธุรกิจของคุณไปสู่ความสำเร็จ</p>
+                <p lang="en">Connect your business with advanced solutions, backed by experience and expertise that will lead your business to success</p>
+                
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn primary-btn" lang="th">ติดต่อเรา</a>
+                    <a href="#contact" class="btn primary-btn" lang="en">Contact Us</a>
+                    <a href="#services" class="btn secondary-btn" lang="th">ดูบริการของเรา</a>
+                    <a href="#services" class="btn secondary-btn" lang="en">Our Services</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
+                <path fill="#ffffff" fill-opacity="1" d="M0,32L60,42.7C120,53,240,75,360,74.7C480,75,600,53,720,42.7C840,32,960,32,1080,42.7C1200,53,1320,75,1380,85.3L1440,96L1440,100L1380,100C1320,100,1200,100,1080,100C960,100,840,100,720,100C600,100,480,100,360,100C240,100,120,100,60,100L0,100Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-count="5">
+                    <i class="fas fa-briefcase"></i>
+                    <h3 class="counter">0</h3>
+                    <p lang="th">ปีแห่งประสบการณ์</p>
+                    <p lang="en">Years of Experience</p>
+                </div>
+                <div class="stat-item" data-count="50">
+                    <i class="fas fa-users"></i>
+                    <h3 class="counter">0</h3>
+                    <p lang="th">ลูกค้าพึงพอใจ</p>
+                    <p lang="en">Happy Clients</p>
+                </div>
+                <div class="stat-item" data-count="100">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3 class="counter">0</h3>
+                    <p lang="th">โครงการสำเร็จ</p>
+                    <p lang="en">Projects Completed</p>
+                </div>
+                <div class="stat-item" data-count="24">
+                    <i class="fas fa-headset"></i>
+                    <h3 class="counter">0</h3>
+                    <p lang="th">ชั่วโมงที่ให้บริการ</p>
+                    <p lang="en">Hours Support</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="services" id="services">
+    <section class="services section-padding" id="services">
         <div class="container">
-            <div class="section-title">
-                <h2 lang="th">บริการของเรา</h2>
-                <h2 lang="en">Our Services</h2>
-                
+            <div class="section-header">
+                <span class="section-subtitle" lang="th">บริการของเรา</span>
+                <span class="section-subtitle" lang="en">Our Services</span>
+                <h2 class="section-title" lang="th">บริการที่เราเชี่ยวชาญ</h2>
+                <h2 class="section-title" lang="en">What We Offer</h2>
                 <p lang="th">บริษัท ภควัต คอนเนคท์ จำกัด ให้บริการที่หลากหลายทั้งด้านกฎหมาย และเทคโนโลยีต่างๆ</p>
                 <p lang="en">Bhagavat Connect Co., Ltd. offers a variety of services in legal consultancy and technology solutions</p>
             </div>
             
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon" style="background: url('/api/placeholder/400/320') center/cover; color: transparent;">
-                        LAW
+                    <div class="service-icon">
+                        <i class="fas fa-balance-scale"></i>
                     </div>
                     <div class="service-content">
                         <h3 lang="th">ที่ปรึกษากฎหมาย</h3>
@@ -68,12 +121,14 @@
                         
                         <p lang="th">ให้บริการด้านกฎหมายธุรกิจและการค้าระหว่างประเทศ กฎหมายที่เกี่ยวข้องกับชาวต่างชาติในประเทศไทย กฎหมายอสังหาริมทรัพย์ กฎหมายครอบครัวและมรดก การระงับข้อพิพาท คดีปกครอง คดีอาญา-แพ่ง และกฎหมายเกี่ยวกับดิจิทัลและเทคโนโลยี</p>
                         <p lang="en">We provide legal services in business and international trade law, laws related to foreigners in Thailand, real estate law, family and inheritance law, dispute resolution, administrative cases, criminal and civil cases, and digital and technology law.</p>
+                        <a href="#contact" class="service-link" lang="th">ขอคำปรึกษา <i class="fas fa-arrow-right"></i></a>
+                        <a href="#contact" class="service-link" lang="en">Get Consultation <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon" style="background: S__16793688.jpg('/api/placeholder/400/320') center/cover; color: transparent;">
-                        AC
+                    <div class="service-icon">
+                        <i class="fas fa-snowflake"></i>
                     </div>
                     <div class="service-content">
                         <h3 lang="th">จำหน่ายและบริการเครื่องปรับอากาศ</h3>
@@ -81,12 +136,14 @@
                         
                         <p lang="th">จำหน่ายเครื่องปรับอากาศคุณภาพสูงทุกยี่ห้อ พร้อมบริการติดตั้งและบำรุงรักษาโดยทีมช่างผู้เชี่ยวชาญ รับประกันผลงาน มีบริการหลังการขายที่ดีเยี่ยม</p>
                         <p lang="en">We sell high-quality air conditioners of all brands, with installation and maintenance services by a team of experts. We guarantee our work and provide excellent after-sales service.</p>
+                        <a href="#contact" class="service-link" lang="th">สอบถามเพิ่มเติม <i class="fas fa-arrow-right"></i></a>
+                        <a href="#contact" class="service-link" lang="en">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon" style="background: url('/api/placeholder/400/320') center/cover; color: transparent;">
-                        HOME
+                    <div class="service-icon">
+                        <i class="fas fa-plug"></i>
                     </div>
                     <div class="service-content">
                         <h3 lang="th">จำหน่ายเครื่องใช้ไฟฟ้าในครัวเรือน</h3>
@@ -94,92 +151,265 @@
                         
                         <p lang="th">ร้านขายปลีกเครื่องใช้ไฟฟ้าชนิดในครัวเรือนที่มีสินค้าหลากหลาย ราคาเป็นมิตร บริการหลังการขายเป็นเลิศ รับประกันสินค้าตามมาตรฐาน</p>
                         <p lang="en">Retail shop for household electrical appliances with a wide range of products, friendly prices, excellent after-sales service, and standard product warranty.</p>
+                        <a href="#contact" class="service-link" lang="th">ดูสินค้า <i class="fas fa-arrow-right"></i></a>
+                        <a href="#contact" class="service-link" lang="en">View Products <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Portfolio Section -->
+    <section class="portfolio section-padding" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle" lang="th">ผลงานของเรา</span>
+                <span class="section-subtitle" lang="en">Our Portfolio</span>
+                <h2 class="section-title" lang="th">ผลงานที่ผ่านมา</h2>
+                <h2 class="section-title" lang="en">Our Recent Work</h2>
+                <p lang="th">ตัวอย่างผลงานคุณภาพที่บริษัทภควัต คอนเนคท์ ภูมิใจนำเสนอ</p>
+                <p lang="en">Examples of quality work that Bhagavat Connect is proud to present</p>
+            </div>
+
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all" lang="th">ทั้งหมด</button>
+                <button class="filter-btn active" data-filter="all" lang="en">All</button>
+                <button class="filter-btn" data-filter="legal" lang="th">กฎหมาย</button>
+                <button class="filter-btn" data-filter="legal" lang="en">Legal</button>
+                <button class="filter-btn" data-filter="ac" lang="th">เครื่องปรับอากาศ</button>
+                <button class="filter-btn" data-filter="ac" lang="en">Air Conditioning</button>
+                <button class="filter-btn" data-filter="appliances" lang="th">เครื่องใช้ไฟฟ้า</button>
+                <button class="filter-btn" data-filter="appliances" lang="en">Appliances</button>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="legal">
+                    <div class="portfolio-img">
+                        <img src="images/portfolio/legal-1.jpg" alt="Legal Case 1">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3 lang="th">ที่ปรึกษากฎหมายธุรกิจ</h3>
+                                <h3 lang="en">Business Legal Consultation</h3>
+                                <p lang="th">ให้คำปรึกษาด้านกฎหมายธุรกิจแก่บริษัทสตาร์ทอัพ</p>
+                                <p lang="en">Provided legal consultation to startup companies</p>
+                                <a href="#" class="portfolio-link"><i class="fas fa-link"></i></a>
+                                <a href="#" class="portfolio-zoom"><i class="fas fa-search"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="ac">
+                    <div class="portfolio-img">
+                        <img src="images/portfolio/ac-1.jpg" alt="Air Conditioning Project 1">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3 lang="th">ติดตั้งระบบปรับอากาศสำนักงาน</h3>
+                                <h3 lang="en">Office Air Conditioning Installation</h3>
+                                <p lang="th">ออกแบบและติดตั้งระบบปรับอากาศสำหรับอาคารสำนักงาน 5 ชั้น</p>
+                                <p lang="en">Designed and installed air conditioning system for a 5-storey office building</p>
+                                <a href="#" class="portfolio-link"><i class="fas fa-link"></i></a>
+                                <a href="#" class="portfolio-zoom"><i class="fas fa-search"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="appliances">
+                    <div class="portfolio-img">
+                        <img src="images/portfolio/appliance-1.jpg" alt="Appliance Project 1">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3 lang="th">จัดหาเครื่องใช้ไฟฟ้าสำหรับโครงการคอนโดมิเนียม</h3>
+                                <h3 lang="en">Appliance Supply for Condominium Project</h3>
+                                <p lang="th">จัดหาเครื่องใช้ไฟฟ้าครบชุดสำหรับโครงการคอนโดมิเนียม 120 ยูนิต</p>
+                                <p lang="en">Supplied complete sets of electrical appliances for a 120-unit condominium project</p>
+                                <a href="#" class="portfolio-link"><i class="fas fa-link"></i></a>
+                                <a href="#" class="portfolio-zoom"><i class="fas fa-search"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="legal">
+                    <div class="portfolio-img">
+                        <img src="images/portfolio/legal-2.jpg" alt="Legal Case 2">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3 lang="th">จดทะเบียนธุรกิจต่างชาติ</h3>
+                                <h3 lang="en">Foreign Business Registration</h3>
+                                <p lang="th">ดำเนินการจดทะเบียนธุรกิจสำหรับชาวต่างชาติในประเทศไทย</p>
+                                <p lang="en">Processed business registration for foreigners in Thailand</p>
+                                <a href="#" class="portfolio-link"><i class="fas fa-link"></i></a>
+                                <a href="#" class="portfolio-zoom"><i class="fas fa-search"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="ac">
+                    <div class="portfolio-img">
+                        <img src="images/portfolio/ac-2.jpg" alt="Air Conditioning Project 2">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3 lang="th">บำรุงรักษาระบบปรับอากาศโรงแรม</h3>
+                                <h3 lang="en">Hotel Air Conditioning Maintenance</h3>
+                                <p lang="th">ให้บริการบำรุงรักษาระบบปรับอากาศสำหรับโรงแรมขนาด 200 ห้อง</p>
+                                <p lang="en">Provided maintenance service for air conditioning systems in a 200-room hotel</p>
+                                <a href="#" class="portfolio-link"><i class="fas fa-link"></i></a>
+                                <a href="#" class="portfolio-zoom"><i class="fas fa-search"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="appliances">
+                    <div class="portfolio-img">
+                        <img src="images/portfolio/appliance-2.jpg" alt="Appliance Project 2">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3 lang="th">จำหน่ายเครื่องใช้ไฟฟ้าสำหรับร้านอาหาร</h3>
+                                <h3 lang="en">Appliance Supply for Restaurant</h3>
+                                <p lang="th">จัดหาและติดตั้งเครื่องใช้ไฟฟ้าสำหรับครัวร้านอาหาร</p>
+                                <p lang="en">Supplied and installed kitchen appliances for restaurant</p>
+                                <a href="#" class="portfolio-link"><i class="fas fa-link"></i></a>
+                                <a href="#" class="portfolio-zoom"><i class="fas fa-search"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section อยู่ในไฟล์ Part 2 -->
-    <!-- Contact Section และ Footer อยู่ในไฟล์ Part 3 -->
-    <!-- JavaScript อยู่ในไฟล์ Part 4 -->
-    
-</body>
-</html>
-<!-- About Section -->
-    <section class="about" id="about">
+    <!-- About Section -->
+    <section class="about section-padding" id="about">
         <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle" lang="th">เกี่ยวกับเรา</span>
+                <span class="section-subtitle" lang="en">About Us</span>
+                <h2 class="section-title" lang="th">เรื่องราวของเรา</h2>
+                <h2 class="section-title" lang="en">Our Story</h2>
+            </div>
+
             <div class="about-content">
                 <div class="about-image">
-                    <div style="height: 320px; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; font-weight: bold; text-align: center;">
-                        <div lang="th">ภควัต<br>คอนเนคท์</div>
-                        <div lang="en">Bhagavat<br>Connect</div>
+                    <div class="about-img-wrapper">
+                        <img src="images/about-us.jpg" alt="About Bhagavat Connect">
+                        <div class="experience-badge">
+                            <span class="years">5+</span>
+                            <span lang="th">ปีแห่งประสบการณ์</span>
+                            <span lang="en">Years of Experience</span>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="about-text">
-                    <h2 lang="th">เกี่ยวกับเรา</h2>
-                    <h2 lang="en">About Us</h2>
+                    <h3 lang="th">บริษัท ภควัต คอนเนคท์ จำกัด</h3>
+                    <h3 lang="en">Bhagavat Connect Co., Ltd.</h3>
                     
                     <p lang="th">บริษัท ภควัต คอนเนคท์ จำกัด (Bhagavat Connect Co., Ltd.) ก่อตั้งขึ้นด้วยวิสัยทัศน์ในการเชื่อมโยงธุรกิจ กฎหมาย ศิลปะวัฒนธรรม และเทคโนโลยีดิจิทัลอย่างมีประสิทธิภาพ เรามุ่งนำเสนอทางออกเชิงระบบคุณภาพสูงที่ตอบโจทย์ความต้องการเฉพาะของลูกค้าทุกประเภท</p>
                     <p lang="en">Bhagavat Connect Co., Ltd. was founded with a vision to efficiently connect business, law, arts, culture, and digital technology. We aim to offer high-quality systematic solutions that meet the specific needs of all types of customers.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4 lang="th">บริการมืออาชีพ</h4>
+                                <h4 lang="en">Professional Service</h4>
+                                <p lang="th">ทีมงานมืออาชีพพร้อมให้บริการอย่างมีประสิทธิภาพ</p>
+                                <p lang="en">Professional team ready to provide efficient service</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4 lang="th">คุณภาพสูง</h4>
+                                <h4 lang="en">High Quality</h4>
+                                <p lang="th">เรามุ่งเน้นคุณภาพในทุกขั้นตอนการบริการ</p>
+                                <p lang="en">We focus on quality in every step of our service</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4 lang="th">ราคาเป็นธรรม</h4>
+                                <h4 lang="en">Fair Pricing</h4>
+                                <p lang="th">บริการคุณภาพในราคาที่เป็นธรรมและโปร่งใส</p>
+                                <p lang="en">Quality service at fair and transparent prices</p>
+                            </div>
+                        </div>
+                    </div>
                     
                     <div class="expertise-section">
                         <h3 lang="th">ความเชี่ยวชาญของเรา</h3>
                         <h3 lang="en">Our Expertise</h3>
                         
-                        <h4 lang="th">ด้านกฎหมาย:</h4>
-                        <h4 lang="en">Legal Services:</h4>
-                        
-                        <ul class="expertise-list" lang="th">
-                            <li>กฎหมายธุรกิจและการค้าระหว่างประเทศ</li>
-                            <li>กฎหมายที่เกี่ยวข้องกับชาวต่างชาติในประเทศไทย</li>
-                            <li>กฎหมายอสังหาริมทรัพย์</li>
-                            <li>กฎหมายครอบครัวและมรดก</li>
-                            <li>กฎหมายดิจิทัลและเทคโนโลยีสารสนเทศ</li>
-                            <li>กฎหมายแพ่ง อาญา</li>
-                            <li>กฎหมายปกครอง</li>
-                            <li>คดีวินัย และคดีอาญาทุจริต</li>
-                        </ul>
-                        
-                        <ul class="expertise-list" lang="en">
-                            <li>Business and international trade law</li>
-                            <li>Laws related to foreigners in Thailand</li>
-                            <li>Real estate law</li>
-                            <li>Family and inheritance law</li>
-                            <li>Digital and information technology law</li>
-                            <li>Civil and criminal law</li>
-                            <li>Administrative law</li>
-                            <li>Disciplinary cases and corruption criminal cases</li>
-                        </ul>
-                        
-                        <h4 lang="th">ด้านเทคโนโลยี:</h4>
-                        <h4 lang="en">Technology Services:</h4>
-                        
-                        <ul class="expertise-list" lang="th">
-                            <li>จำหน่ายและติดตั้งระบบทำความเย็นและระบบไฟฟ้า</li>
-                            <li>บริการบำรุงรักษาโดยทีมงานผู้เชี่ยวชาญ</li>
-                            <li>ให้คำปรึกษาเพื่อการใช้พลังงานอย่างมีประสิทธิภาพ</li>
-                        </ul>
-                        
-                        <ul class="expertise-list" lang="en">
-                            <li>Sales and installation of cooling systems and electrical systems</li>
-                            <li>Maintenance services by a team of experts</li>
-                            <li>Consultation for efficient energy usage</li>
-                        </ul>
-                        
-                        <h4 lang="th">ด้านศิลปะวัฒนธรรม:</h4>
-                        <h4 lang="en">Arts and Culture:</h4>
-                        
-                        <ul class="expertise-list" lang="th">
-                            <li>จำหน่ายผลิตภัณฑ์ศิลปะวัฒนธรรมไทย</li>
-                            <li>งานฝีมือประณีตที่ผสมผสานความร่วมสมัยกับเอกลักษณ์ทางวัฒนธรรม</li>
-                        </ul>
-                        
-                        <ul class="expertise-list" lang="en">
-                            <li>Sales of Thai arts and cultural products</li>
-                            <li>Fine craftsmanship that combines contemporary styles with cultural identity</li>
-                        </ul>
+                        <div class="expertise-tabs">
+                            <div class="tab-buttons">
+                                <button class="tab-btn active" data-tab="legal" lang="th">ด้านกฎหมาย</button>
+                                <button class="tab-btn active" data-tab="legal" lang="en">Legal Services</button>
+                                <button class="tab-btn" data-tab="tech" lang="th">ด้านเทคโนโลยี</button>
+                                <button class="tab-btn" data-tab="tech" lang="en">Technology</button>
+                                <button class="tab-btn" data-tab="art" lang="th">ด้านศิลปะวัฒนธรรม</button>
+                                <button class="tab-btn" data-tab="art" lang="en">Arts & Culture</button>
+                            </div>
+                            
+                            <div class="tab-content active" id="legal">
+                                <ul class="expertise-list" lang="th">
+                                    <li>กฎหมายธุรกิจและการค้าระหว่างประเทศ</li>
+                                    <li>กฎหมายที่เกี่ยวข้องกับชาวต่างชาติในประเทศไทย</li>
+                                    <li>กฎหมายอสังหาริมทรัพย์</li>
+                                    <li>กฎหมายครอบครัวและมรดก</li>
+                                    <li>กฎหมายดิจิทัลและเทคโนโลยีสารสนเทศ</li>
+                                    <li>กฎหมายแพ่ง อาญา</li>
+                                    <li>กฎหมายปกครอง</li>
+                                    <li>คดีวินัย และคดีอาญาทุจริต</li>
+                                </ul>
+                                
+                                <ul class="expertise-list" lang="en">
+                                    <li>Business and international trade law</li>
+                                    <li>Laws related to foreigners in Thailand</li>
+                                    <li>Real estate law</li>
+                                    <li>Family and inheritance law</li>
+                                    <li>Digital and information technology law</li>
+                                    <li>Civil and criminal law</li>
+                                    <li>Administrative law</li>
+                                    <li>Disciplinary cases and corruption criminal cases</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="tab-content" id="tech">
+                                <ul class="expertise-list" lang="th">
+                                    <li>จำหน่ายและติดตั้งระบบทำความเย็นและระบบไฟฟ้า</li>
+                                    <li>บริการบำรุงรักษาโดยทีมงานผู้เชี่ยวชาญ</li>
+                                    <li>ให้คำปรึกษาเพื่อการใช้พลังงานอย่างมีประสิทธิภาพ</li>
+                                    <li>ออกแบบระบบปรับอากาศสำหรับอาคารพาณิชย์</li>
+                                    <li>ติดตั้งและซ่อมบำรุง
+<ul class="expertise-list" lang="en">
+                                    <li>Sales and installation of cooling systems and electrical systems</li>
+                                    <li>Maintenance services by a team of experts</li>
+                                    <li>Consultation for efficient energy usage</li>
+                                    <li>Air conditioning system design for commercial buildings</li>
+                                    <li>Installation and maintenance of household electrical appliances</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="tab-content" id="art">
+                                <ul class="expertise-list" lang="th">
+                                    <li>จำหน่ายผลิตภัณฑ์ศิลปะวัฒนธรรมไทย</li>
+                                    <li>งานฝีมือประณีตที่ผสมผสานความร่วมสมัยกับเอกลักษณ์ทางวัฒนธรรม</li>
+                                    <li>จัดแสดงและจำหน่ายผลงานศิลปะไทยร่วมสมัย</li>
+                                    <li>บริการให้คำปรึกษาด้านการออกแบบที่ผสานศิลปะวัฒนธรรมไทย</li>
+                                </ul>
+                                
+                                <ul class="expertise-list" lang="en">
+                                    <li>Sales of Thai arts and cultural products</li>
+                                    <li>Fine craftsmanship that combines contemporary styles with cultural identity</li>
+                                    <li>Exhibition and sales of contemporary Thai art</li>
+                                    <li>Consulting services for designs that incorporate Thai arts and culture</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     
                     <div class="core-values">
@@ -193,13 +423,276 @@
             </div>
         </div>
     </section>
-<!-- Contact Section -->
-    <section class="contact" id="contact">
+
+    <!-- Team Section -->
+    <section class="team section-padding" id="team">
         <div class="container">
-            <div class="section-title">
-                <h2 lang="th">ติดต่อเรา</h2>
-                <h2 lang="en">Contact Us</h2>
-                
+            <div class="section-header">
+                <span class="section-subtitle" lang="th">ทีมงานของเรา</span>
+                <span class="section-subtitle" lang="en">Our Team</span>
+                <h2 class="section-title" lang="th">ผู้เชี่ยวชาญของเรา</h2>
+                <h2 class="section-title" lang="en">Our Experts</h2>
+                <p lang="th">ทีมงานมากประสบการณ์ที่พร้อมให้บริการอย่างมืออาชีพ</p>
+                <p lang="en">Our experienced team ready to provide professional services</p>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="images/team/team-1.jpg" alt="Team Member 1">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3 lang="th">นาย คหบดี คชาเสถ</h3>
+                        <h3 lang="en">Mr. Kahabordee Kachasat</h3>
+                        <span lang="th">หัวหน้าสำนักงานกฎหมายและทนายความ</span>
+                        <span lang="en">Head of Law Office and Attorney</span>
+                        <p lang="th">มีประสบการณ์ด้านกฎหมายกว่า 10 ปี</p>
+                        <p lang="en">Over 10 years of legal experience</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="images/team/team-2.jpg" alt="Team Member 2">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3 lang="th"></h3>
+                        <h3 lang="en"></h3>
+                        <span lang="th"></span>
+                        <span lang="en"></span>
+                        <p lang="th">ผู้เชี่ยวชาญระบบปรับอากาศและเครื่องใช้ไฟฟ้าที่มีประสบการณ์มากกว่า 10 ปี</p>
+                        <p lang="en">Expert in air conditioning and electrical appliances with over 10 years of experience</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="images/team/team-3.jpg" alt="Team Member 3">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3 lang="th"></h3>
+                        <h3 lang="en"></h3>
+                        <span lang="th"></span>
+                        <span lang="en"></span>
+                        <p lang="th"></p>
+                        <p lang="en"></p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="images/team/team-4.jpg" alt="Team Member 4">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3 lang="th"></h3>
+                        <h3 lang="en"></h3>
+                        <span lang="th"></span>
+                        <span lang="en"></span>
+                        <p lang="th"></p>
+                        <p lang="en"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Testimonials Section -->
+    <section class="testimonials section-padding" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle" lang="th">ความคิดเห็นของลูกค้า</span>
+                <span class="section-subtitle" lang="en">Testimonials</span>
+                <h2 class="section-title" lang="th">ลูกค้าของเราพูดถึงเราอย่างไร</h2>
+                <h2 class="section-title" lang="en">What Our Clients Say</h2>
+                <p lang="th">เสียงจากลูกค้าที่ใช้บริการของเรา</p>
+                <p lang="en">Feedback from our satisfied clients</p>
+            </div>
+
+            <div class="testimonials-slider">
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p lang="th">"บริษัท ภควัต คอนเนคท์ ให้คำปรึกษาด้านกฎหมายธุรกิจแก่บริษัทของเราได้อย่างมืออาชีพมาก ทีมงานมีความรู้และเข้าใจความต้องการของเราเป็นอย่างดี แนะนำเลยครับ"</p>
+                        <p lang="en">"Bhagavat Connect provided very professional business legal consultation to our company. The team is knowledgeable and understands our needs very well. Highly recommended!"</p>
+                    </div>
+                    <div class="testimonial-info">
+                        <img src="images/testimonials/client-1.jpg" alt="Client 1">
+                        <div>
+                            <h4 lang="th">คุณสมบัติ นักธุรกิจ</h4>
+                            <h4 lang="en">Mr. Sombat Nakturakij</h4>
+                            <span lang="th">ผู้จัดการ, บริษัท ไทยธุรกิจ จำกัด</span>
+                            <span lang="en">Manager, Thai Business Co., Ltd.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p lang="th">"ทีมติดตั้งเครื่องปรับอากาศทำงานได้รวดเร็วและเรียบร้อยมาก ให้คำแนะนำดีๆ เกี่ยวกับการดูแลรักษา และราคาก็ยุติธรรม ประทับใจมากครับ"</p>
+                        <p lang="en">"The air conditioning installation team worked quickly and neatly. They gave great advice on maintenance, and the price was fair. Very impressed!"</p>
+                    </div>
+                    <div class="testimonial-info">
+                        <img src="images/testimonials/client-2.jpg" alt="Client 2">
+                        <div>
+                            <h4 lang="th">คุณสุชาติ เจ้าของบ้าน</h4>
+                            <h4 lang="en">Mr. Suchart Chaobaan</h4>
+                            <span lang="th">เจ้าของบ้าน</span>
+                            <span lang="en">Home Owner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p lang="th">"เราได้รับความช่วยเหลือในการจดทะเบียนธุรกิจและขออนุญาตการทำงานในประเทศไทย ทุกอย่างเป็นไปอย่างราบรื่นและรวดเร็ว ขอขอบคุณทีม ภควัต คอนเนคท์"</p>
+                        <p lang="en">"We received assistance in business registration and work permit application in Thailand. Everything went smoothly and quickly. Thank you, Bhagavat Connect team!"</p>
+                    </div>
+                    <div class="testimonial-info">
+                        <img src="images/testimonials/client-3.jpg" alt="Client 3">
+                        <div>
+                            <h4 lang="th">Mr. John Smith</h4>
+                            <h4 lang="en">Mr. John Smith</h4>
+                            <span lang="th">นักธุรกิจชาวอเมริกัน</span>
+                            <span lang="en">American Businessman</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-dots"></div>
+
+            <div class="testimonial-cta">
+                <p lang="th">พร้อมที่จะทำงานร่วมกับเรา?</p>
+                <p lang="en">Ready to work with us?</p>
+                <a href="#contact" class="btn primary-btn" lang="th">ติดต่อเรา</a>
+                <a href="#contact" class="btn primary-btn" lang="en">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle" lang="th">คำถามที่พบบ่อย</span>
+                <span class="section-subtitle" lang="en">FAQs</span>
+                <h2 class="section-title" lang="th">คำถามที่พบบ่อย</h2>
+                <h2 class="section-title" lang="en">Frequently Asked Questions</h2>
+                <p lang="th">ข้อสงสัยที่ลูกค้ามักถามเกี่ยวกับบริการของเรา</p>
+                <p lang="en">Common questions our clients ask about our services</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3 lang="th">บริษัทของท่านให้บริการกฎหมายในด้านใดบ้าง?</h3>
+                        <h3 lang="en">What legal services does your company offer?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p lang="th">เราให้บริการด้านกฎหมายหลากหลายประเภท ได้แก่ กฎหมายธุรกิจและการค้าระหว่างประเทศ กฎหมายที่เกี่ยวข้องกับชาวต่างชาติในประเทศไทย กฎหมายอสังหาริมทรัพย์ กฎหมายครอบครัวและมรดก กฎหมายดิจิทัลและเทคโนโลยีสารสนเทศ กฎหมายแพ่ง อาญา กฎหมายปกครอง รวมถึงคดีวินัย และคดีอาญาทุจริต</p>
+                        <p lang="en">We provide various legal services including business and international trade law, laws related to foreigners in Thailand, real estate law, family and inheritance law, digital and information technology law, civil and criminal law, administrative law, disciplinary cases, and corruption criminal cases.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3 lang="th">มีบริการหลังการขายสำหรับเครื่องปรับอากาศหรือไม่?</h3>
+                        <h3 lang="en">Is there after-sales service for air conditioners?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p lang="th">ใช่ เรามีบริการหลังการขายสำหรับเครื่องปรับอากาศทุกรุ่นที่เราจำหน่าย รวมถึงการบำรุงรักษาตามระยะเวลา การซ่อมแซม และการให้คำปรึกษาเกี่ยวกับการใช้งานอย่างมีประสิทธิภาพ</p>
+                        <p lang="en">Yes, we offer after-sales service for all air conditioner models we sell, including regular maintenance, repairs, and consultation on efficient usage.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3 lang="th">ค่าบริการด้านกฎหมายคิดอย่างไร?</h3>
+                        <h3 lang="en">How are legal service fees calculated?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p lang="th">ค่าบริการด้านกฎหมายจะขึ้นอยู่กับประเภทและความซับซ้อนของงาน เราสามารถคิดค่าบริการแบบเหมาจ่ายหรือตามชั่วโมงการทำงาน ท่านสามารถนัดปรึกษาเบื้องต้นกับทีมกฎหมายของเราเพื่อประเมินค่าบริการที่เหมาะสมได้</p>
+                        <p lang="en">Legal service fees depend on the type and complexity of the work. We can charge either a flat fee or an hourly rate. You can schedule an initial consultation with our legal team to assess the appropriate fee.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3 lang="th">รับทำเรื่องวีซ่าและใบอนุญาตทำงานสำหรับชาวต่างชาติหรือไม่?</h3>
+                        <h3 lang="en">Do you handle visa and work permit applications for foreigners?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p lang="th">ใช่ เราให้บริการด้านวีซ่าและใบอนุญาตทำงานสำหรับชาวต่างชาติที่ต้องการทำงานหรือพำนักในประเทศไทย ทีมงานของเรามีความเชี่ยวชาญในการจัดการเอกสารและประสานงานกับหน่วยงานราชการที่เกี่ยวข้อง</p>
+                        <p lang="en">Yes, we provide visa and work permit services for foreigners who wish to work or stay in Thailand. Our team specializes in document management and coordination with relevant government agencies.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3 lang="th">มีบริการติดตั้งเครื่องปรับอากาศนอกเวลาทำการหรือไม่?</h3>
+                        <h3 lang="en">Do you offer air conditioning installation services outside regular business hours?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p lang="th">เรามีบริการติดตั้งนอกเวลาทำการสำหรับลูกค้าที่มีความจำเป็น โดยอาจมีค่าบริการเพิ่มเติม กรุณาติดต่อเราล่วงหน้าเพื่อนัดหมายเวลาที่เหมาะสม</p>
+                        <p lang="en">We offer installation services outside regular business hours for clients who need it, with additional fees. Please contact us in advance to schedule a suitable time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section-padding" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle" lang="th">ติดต่อเรา</span>
+                <span class="section-subtitle" lang="en">Contact Us</span>
+                <h2 class="section-title" lang="th">พูดคุยกับเรา</h2>
+                <h2 class="section-title" lang="en">Get In Touch</h2>
                 <p lang="th">หากคุณสนใจบริการของเราหรือมีข้อสงสัยใดๆ โปรดติดต่อเราได้ตามช่องทางด้านล่าง</p>
                 <p lang="en">If you are interested in our services or have any questions, please contact us through the channels below</p>
             </div>
@@ -211,9 +704,7 @@
                     
                     <div class="contact-info-item">
                         <div class="contact-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-                            </svg>
+                            <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div>
                             <h4 lang="th">ที่อยู่</h4>
@@ -224,9 +715,7 @@
                     
                     <div class="contact-info-item">
                         <div class="contact-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-                            </svg>
+                            <i class="fas fa-phone-alt"></i>
                         </div>
                         <div>
                             <h4 lang="th">โทรศัพท์</h4>
@@ -237,9 +726,7 @@
                     
                     <div class="contact-info-item">
                         <div class="contact-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-                            </svg>
+                            <i class="fas fa-envelope"></i>
                         </div>
                         <div>
                             <h4 lang="th">อีเมล</h4>
@@ -247,13 +734,32 @@
                             <p>bhagavat235@gmail.com</p>
                         </div>
                     </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4 lang="th">เวลาทำการ</h4>
+                            <h4 lang="en">Working Hours</h4>
+                            <p lang="th">จันทร์ - ศุกร์: 9:00 - 18:00<br>เสาร์: 9:00 - 15:00<br>อาทิตย์: ปิดทำการ</p>
+                            <p lang="en">Monday - Friday: 9:00 - 18:00<br>Saturday: 9:00 - 15:00<br>Sunday: Closed</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
                 
                 <div class="contact-form">
                     <h3 lang="th">ส่งข้อความถึงเรา</h3>
                     <h3 lang="en">Send us a message</h3>
                     
-                    <form>
+                    <form id="contactForm">
                         <div class="form-group">
                             <label for="name" lang="th">ชื่อ-นามสกุล</label>
                             <label for="name" lang="en">Full Name</label>
@@ -267,530 +773,121 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="subject" lang="th">หัวข้อ</label>
-                            <label for="subject" lang="en">Subject</label>
-                            <input type="text" id="subject" class="form-control" required>
+                            <label for="phone" lang="th">เบอร์โทรศัพท์</label>
+                            <label for="phone" lang="en">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service" lang="th">บริการที่สนใจ</label>
+                            <label for="service" lang="en">Service Interested In</label>
+                            <select id="service" class="form-control">
+                                <option value="" lang="th">-- เลือกบริการ --</option>
+                                <option value="" lang="en">-- Select Service --</option>
+                                <option value="legal" lang="th">บริการด้านกฎหมาย</option>
+                                <option value="legal" lang="en">Legal Services</option>
+                                <option value="ac" lang="th">เครื่องปรับอากาศ</option>
+                                <option value="ac" lang="en">Air Conditioning</option>
+                                <option value="appliances" lang="th">เครื่องใช้ไฟฟ้า</option>
+                                <option value="appliances" lang="en">Electrical Appliances</option>
+                                <option value="art" lang="th">ศิลปะและวัฒนธรรม</option>
+                                <option value="art" lang="en">Arts and Culture</option>
+                                <option value="other" lang="th">อื่นๆ</option>
+                                <option value="other" lang="en">Other</option>
+                            </select>
                         </div>
                         
                         <div class="form-group">
                             <label for="message" lang="th">ข้อความ</label>
                             <label for="message" lang="en">Message</label>
-                            <textarea id="message" class="form-control" required></textarea>
+                            <textarea id="message" class="form-control" rows="5" required></textarea>
                         </div>
                         
-                        <button type="submit" class="submit-btn" lang="th">ส่งข้อความ</button>
-                        <button type="submit" class="submit-btn" lang="en">Send Message</button>
+                        <button type="submit" class="btn primary-btn submit-btn" lang="th">ส่งข้อความ</button>
+                        <button type="submit" class="btn primary-btn submit-btn" lang="en">Send Message</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Map Section -->
+    <div class="map-section">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3872.5453024830146!2d100.6229349760491!3d13.944174783379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d7d115f41978d%3A0x83cf0685e41345bf!2sGolden%20Town%202%20Ramintra%20-%20Ring%20Road!5e0!3m2!1sen!2sth!4v1685185642415!5m2!1sen!2sth" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <ul class="footer-links">
-                <li><a href="#home" lang="th">หน้าหลัก</a><a href="#home" lang="en">Home</a></li>
-                <li><a href="#services" lang="th">บริการ</a><a href="#services" lang="en">Services</a></li>
-                <li><a href="#about" lang="th">เกี่ยวกับเรา</a><a href="#about" lang="en">About Us</a></li>
-                <li><a href="#contact" lang="th">ติดต่อ</a><a href="#contact" lang="en">Contact</a></li>
-            </ul>
-            
-            <div class="copyright" lang="th">
-                &copy; 2025 บริษัท ภควัต คอนเนคท์ จำกัด. สงวนลิขสิทธิ์.
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <img src="images/logo.jpg" alt="ภควัต คอนเนคท์ โลโก้" width="60" height="60">
+                        <h2>ภควัต คอนเนคท์<span>BHAGAVAT CONNECT</span></h2>
+                    </div>
+                    <p lang="th">บริษัท ภควัต คอนเนคท์ จำกัด ให้บริการด้านกฎหมาย เทคโนโลยี และศิลปวัฒนธรรม ด้วยมาตรฐานสูงสุดและความเป็นมืออาชีพ</p>
+                    <p lang="en">Bhagavat Connect Co., Ltd. provides legal, technology, and cultural arts services with the highest standards and professionalism.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3 lang="th">ลิงก์ที่มีประโยชน์</h3>
+                    <h3 lang="en">Useful Links</h3>
+                    <ul>
+                        <li><a href="#home" lang="th">หน้าหลัก</a><a href="#home" lang="en">Home</a></li>
+                        <li><a href="#services" lang="th">บริการ</a><a href="#services" lang="en">Services</a></li>
+                        <li><a href="#portfolio" lang="th">ผลงาน</a><a href="#portfolio" lang="en">Portfolio</a></li>
+                        <li><a href="#about" lang="th">เกี่ยวกับเรา</a><a href="#about" lang="en">About Us</a></li>
+                        <li><a href="#team" lang="th">ทีมงาน</a><a href="#team" lang="en">Our Team</a></li>
+                        <li><a href="#contact" lang="th">ติดต่อ</a><a href="#contact" lang="en">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3 lang="th">บริการของเรา</h3>
+                    <h3 lang="en">Our Services</h3>
+                    <ul>
+                        <li><a href="#services" lang="th">ที่ปรึกษากฎหมาย</a><a href="#services" lang="en">Legal Consultancy</a></li>
+                        <li><a href="#services" lang="th">เครื่องปรับอากาศ</a><a href="#services" lang="en">Air Conditioning</a></li>
+                        <li><a href="#services" lang="th">เครื่องใช้ไฟฟ้า</a><a href="#services" lang="en">Electrical Appliances</a></li>
+                        <li><a href="#services" lang="th">ศิลปะและวัฒนธรรม</a><a href="#services" lang="en">Arts & Culture</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3 lang="th">รับข่าวสารจากเรา</h3>
+                    <h3 lang="en">Newsletter</h3>
+                    <p lang="th">ลงทะเบียนเพื่อรับข่าวสารและโปรโมชั่นล่าสุดจากเรา</p>
+                    <p lang="en">Subscribe to receive our latest news and promotions</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="อีเมลของคุณ" class="newsletter-input" lang="th">
+                        <input type="email" placeholder="Your Email" class="newsletter-input" lang="en">
+                        <button type="submit" class="newsletter-btn" lang="th">สมัคร</button>
+                        <button type="submit" class="newsletter-btn" lang="en">Subscribe</button>
+                    </form>
+                </div>
             </div>
-            <div class="copyright" lang="en">
-                &copy; 2025 Bhagavat Connect Co., Ltd. All rights reserved.
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p lang="th">&copy; 2025 บริษัท ภควัต คอนเนคท์ จำกัด. สงวนลิขสิทธิ์.</p>
+                    <p lang="en">&copy; 2025 Bhagavat Connect Co., Ltd. All Rights Reserved.</p>
+                </div>
+                <div class="footer-policy-links">
+                    <a href="#" lang="th">นโยบายความเป็นส่วนตัว</a>
+                    <a href="#" lang="en">Privacy Policy</a>
+                    <a href="#" lang="th">ข้อกำหนดการใช้งาน</a>
+                    <a href="#" lang="en">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
-<!-- CSS ในส่วน head ของไฟล์ HTML -->
-<style>
-    :root {
-        --primary-color: #c10000;
-        --primary-color-rgb: 193, 0, 0;
-        --secondary-color: #ff3333;
-        --accent-color: #870000;
-        --text-color: #333;
-        --light-color: #f5f5f5;
-        --dark-color: #4d0000;
-    }
-        
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Rajdhani', 'Kanit', 'Prompt', sans-serif;
-    }
-        
-    body {
-        color: var(--text-color);
-        background-color: var(--light-color);
-        line-height: 1.6;
-    }
-        
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-        
-    /* Header Styles */
-    header {
-        background-color: white;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-    }
-        
-    .header-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 0;
-    }
-        
-    .logo {
-        display: flex;
-        align-items: center;
-    }
-        
-    .logo h1 {
-        font-size: 1.8rem;
-        color: var(--primary-color);
-        margin-left: 10px;
-    }
-        
-    .logo span {
-        font-size: 1rem;
-        color: var(--secondary-color);
-        display: block;
-    }
-    
-    .logo img {
-        border-radius: 50%;
-        object-fit: cover;
-        margin-right: 10px;
-    }
-        
-    nav ul {
-        display: flex;
-        list-style: none;
-    }
-        
-    nav ul li {
-        margin-left: 30px;
-    }
-        
-    nav ul li a {
-        color: var(--text-color);
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.3s;
-    }
-        
-    nav ul li a:hover {
-        color: var(--primary-color);
-    }
-    
-    /* Language Switcher */
-    .language-switcher {
-        display: flex;
-        align-items: center;
-        margin-left: 20px;
-    }
-    
-    .language-btn {
-        background-color: transparent;
-        border: 1px solid var(--primary-color);
-        color: var(--primary-color);
-        padding: 5px 10px;
-        cursor: pointer;
-        font-size: 0.9rem;
-        transition: all 0.3s;
-        border-radius: 4px;
-        margin: 0 5px;
-    }
-    
-    .language-btn:hover, .language-btn.active {
-        background-color: var(--primary-color);
-        color: white;
-    }
-        
-    /* Hero Section */
-/* Hero Section */
-    .hero {
-        background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
-        color: white;
-        padding: 150px 0 100px;
-        text-align: center;
-    }
-        
-    .hero h2 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-    }
-        
-    .hero p {
-        font-size: 1.2rem;
-        max-width: 700px;
-        margin: 0 auto 30px;
-    }
-        
-    .btn {
-        display: inline-block;
-        background-color: white;
-        color: var(--primary-color);
-        padding: 12px 30px;
-        border-radius: 30px;
-        text-decoration: none;
-        font-weight: 600;
-        transition: all 0.3s;
-    }
-        
-    .btn:hover {
-        background-color: var(--accent-color);
-        color: white;
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-        
-    /* Services Section */
-    .services {
-        padding: 80px 0;
-    }
-        
-    .section-title {
-        text-align: center;
-        margin-bottom: 60px;
-    }
-        
-    .section-title h2 {
-        font-size: 2rem;
-        color: var(--primary-color);
-        margin-bottom: 15px;
-    }
-        
-    .section-title p {
-        max-width: 700px;
-        margin: 0 auto;
-        color: var(--text-color);
-    }
-        
-    .services-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-    }
-        
-    .service-card {
-        background-color: white;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        transition: transform 0.3s, box-shadow 0.3s;
-    }
-        
-    .service-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-    }
-        
-    .service-icon {
-        height: 200px;
-        background-color: var(--secondary-color);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 3rem;
-        color: white;
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .service-icon::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(var(--primary-color-rgb), 0.3);
-        z-index: 1;
-    }
-        
-    .service-content {
-        padding: 30px;
-    }
-        
-    .service-content h3 {
-        color: var(--primary-color);
-        margin-bottom: 15px;
-    }
-        
-    /* About Section */
-    .about {
-        padding: 80px 0;
-        background-color: white;
-    }
-        
-    .about-content {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 50px;
-        align-items: center;
-    }
-        
-    .about-image {
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
-        
-    .about-image img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-        
-    .about-text h2 {
-        color: var(--primary-color);
-        margin-bottom: 20px;
-        font-size: 2rem;
-    }
-        
-    .about-text p {
-        margin-bottom: 20px;
-    }
-        
-    .expertise-section {
-        margin-top: 40px;
-    }
-        
-    .expertise-section h3 {
-        color: var(--primary-color);
-        margin-bottom: 15px;
-        font-size: 1.5rem;
-    }
-        
-    .expertise-list {
-        padding-left: 20px;
-        margin-bottom: 20px;
-    }
-        
-    .expertise-list li {
-        margin-bottom: 8px;
-    }
-        
-    .core-values {
-        margin-top: 30px;
-        padding: 20px;
-        background-color: var(--light-color);
-        border-radius: 10px;
-        border-left: 4px solid var(--primary-color);
-    }
-        
-    .core-values h4 {
-        color: var(--primary-color);
-        margin-bottom: 10px;
-    }
-        
-    /* Contact Section */
-    .contact {
-        padding: 80px 0;
-        background-color: var(--light-color);
-    }
-        
-    .contact-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 50px;
-    }
-        
-    .contact-info h3 {
-        color: var(--primary-color);
-        margin-bottom: 20px;
-    }
-        
-    .contact-info p {
-        margin-bottom: 15px;
-    }
-        
-    .contact-info-item {
-        display: flex;
-        align-items: flex-start;
-        margin-bottom: 20px;
-    }
-        
-    .contact-icon {
-        min-width: 40px;
-        height: 40px;
-        background-color: var(--primary-color);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        margin-right: 15px;
-    }
-        
-    .contact-form {
-        background-color: white;
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-        
-    .form-group {
-        margin-bottom: 20px;
-    }
-        
-    .form-group label {
-        display: block;
-        margin-bottom: 5px;
-        color: var(--text-color);
-    }
-        
-    .form-control {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        font-size: 1rem;
-    }
-        
-    textarea.form-control {
-        height: 120px;
-        resize: vertical;
-    }
-        
-    .submit-btn {
-        background-color: var(--primary-color);
-        color: white;
-        border: none;
-        padding: 12px 30px;
-        font-size: 1rem;
-        border-radius: 30px;
-        cursor: pointer;
-        transition: all 0.3s;
-    }
-        
-    .submit-btn:hover {
-        background-color: var(--accent-color);
-    }
-        
-    /* Footer */
-    footer {
-        background-color: var(--dark-color);
-        color: white;
-        padding: 50px 0 20px;
-        text-align: center;
-    }
-        
-    .footer-links {
-        display: flex;
-        justify-content: center;
-        list-style: none;
-        margin-bottom: 30px;
-    }
-        
-    .footer-links li {
-        margin: 0 15px;
-    }
-        
-    .footer-links a {
-        color: white;
-        text-decoration: none;
-        transition: color 0.3s;
-    }
-        
-    .footer-links a:hover {
-        color: var(--secondary-color);
-    }
-        
-    .copyright {
-        font-size: 0.9rem;
-        color: rgba(255,255,255,0.7);
-    }
-    
-    /* Multilingual Support */
-    [lang="en"] {
-        display: none;
-    }
-        
-    /* Responsive */
-    @media (max-width: 768px) {
-        .header-container {
-            flex-direction: column;
-            text-align: center;
-        }
-            
-        nav ul {
-            margin-top: 20px;
-            justify-content: center;
-        }
-            
-        nav ul li {
-            margin: 0 10px;
-        }
-            
-        .hero h2 {
-            font-size: 2rem;
-        }
-            
-        .hero p {
-            font-size: 1rem;
-        }
-            
-        .expertise-section {
-            margin-top: 30px;
-        }
-        
-        .language-switcher {
-            margin: 15px 0 0;
-        }
-    }
-</style>
 
-<!-- JavaScript for Language Switching - Add at the bottom of the HTML file before the closing </body> tag -->
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Get language buttons
-        const langButtons = document.querySelectorAll('.language-btn');
-        
-        // Add click event listeners to language buttons
-        langButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const lang = this.getAttribute('data-lang');
-                switchLanguage(lang);
-                
-                // Update active button
-                langButtons.forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
-        
-        // Function to switch language
-        function switchLanguage(lang) {
-            // Set the html lang attribute
-            document.documentElement.lang = lang;
-            
-            // Hide all language elements
-            document.querySelectorAll('[lang]').forEach(el => {
-                el.style.display = 'none';
-            });
-            
-            // Show elements with the selected language
-            document.querySelectorAll(`[lang="${lang}"]`).forEach(el => {
-                el.style.display = '';
-            });
-        }
-        
-        // Initialize with Thai language (already set in CSS)
-        document.querySelectorAll('[lang="th"]').forEach(el => {
-            el.style.display = '';
-        });
-    });
-</script>
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
