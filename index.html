@@ -29,6 +29,33 @@
         }
     </style>
 </head>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บริษัท ภควัต คอนเนคท์ จำกัด (Bhagavat Connect Co., Ltd.)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Prompt:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- เพิ่มไฟล์ CSS ใหม่สำหรับแก้ไขปัญหาภาษาและการแสดงผล -->
+    <link rel="stylesheet" href="css/language-fix.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <!-- สคริปต์ฉุกเฉินเพื่อซ่อนภาษาอังกฤษตั้งแต่เริ่มต้น -->
+    <script>
+        // กำหนดภาษาเริ่มต้นเป็นภาษาไทย
+        document.documentElement.lang = 'th';
+        
+        // ซ่อนเนื้อหาภาษาอังกฤษทันที
+        document.addEventListener('DOMContentLoaded', function() {
+            // ใช้ CSS เป็นหลักในการซ่อน/แสดงเนื้อหา ตามที่กำหนดใน language-fix.css
+            console.log('Initial language set to Thai');
+        });
+    </script>
 <body>
     <!-- Header -->
     <header id="header">
