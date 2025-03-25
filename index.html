@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="th">
 <head>
     <meta charset="UTF-8">
@@ -9,43 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Prompt:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <!-- เพิ่มไฟล์ CSS ใหม่สำหรับแก้ไขปัญหาภาษาและการแสดงผล -->
     <link rel="stylesheet" href="css/language-fix.css">
+    <link rel="stylesheet" href="css/responsive-fix.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="js/script.js"></script>
-</head>
-<body>
-    <!-- สคริปต์ฉุกเฉินเพื่อซ่อนภาษาอังกฤษตั้งแต่เริ่มต้น -->
-    <script>
-        // กำหนดภาษาเริ่มต้นเป็นภาษาไทย
-        document.documentElement.lang = 'th';
-        
-        // ซ่อนเนื้อหาภาษาอังกฤษทันที
-        document.addEventListener('DOMContentLoaded', function() {
-            // ใช้ CSS เป็นหลักในการซ่อน/แสดงเนื้อหา ตามที่กำหนดใน language-fix.css
-            console.log('Initial language set to Thai');
-        });
-    </script>
-    
-    <!-- ส่วนที่เหลือของเนื้อหา HTML -->
-    <style>
-        /* เพิ่ม CSS เพื่อปรับปรุงการแสดงผลบนมือถือ */
-        @media (max-width: 768px) {
-            .hero-content h2 {
-                font-size: 24px;
-            }
-            .services-grid, .portfolio-grid, .team-grid {
-                grid-template-columns: 1fr;
-            }
-            .contact-container {
-                flex-direction: column;
-            }
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Header -->
@@ -82,10 +47,8 @@
             <div class="hero-content">
                 <h2 lang="th">ยินดีต้อนรับสู่ ภควัต คอนเนคท์</h2>
                 <h2 lang="en">Welcome to Bhagavat Connect</h2>
-                
                 <p lang="th">เชื่อมต่อโลกธุรกิจของคุณด้วยโซลูชั่นที่ล้ำสมัย พร้อมประสบการณ์และความเชี่ยวชาญที่จะพาธุรกิจของคุณไปสู่ความสำเร็จ</p>
                 <p lang="en">Connect your business with advanced solutions, backed by experience and expertise that will lead your business to success</p>
-                
                 <div class="hero-buttons">
                     <a href="#contact" class="btn primary-btn" lang="th">ติดต่อเรา</a>
                     <a href="#contact" class="btn primary-btn" lang="en">Contact Us</a>
@@ -144,7 +107,6 @@
                 <p lang="th">บริษัท ภควัต คอนเนคท์ จำกัด ให้บริการที่หลากหลายทั้งด้านกฎหมาย และเทคโนโลยีต่างๆ</p>
                 <p lang="en">Bhagavat Connect Co., Ltd. offers a variety of services in legal consultancy and technology solutions</p>
             </div>
-            
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
@@ -153,14 +115,12 @@
                     <div class="service-content">
                         <h3 lang="th">ที่ปรึกษากฎหมาย</h3>
                         <h3 lang="en">Legal Consultancy</h3>
-                        
                         <p lang="th">ให้บริการด้านกฎหมายธุรกิจและการค้าระหว่างประเทศ กฎหมายที่เกี่ยวข้องกับชาวต่างชาติในประเทศไทย กฎหมายอสังหาริมทรัพย์ กฎหมายครอบครัวและมรดก การระงับข้อพิพาท คดีปกครอง คดีอาญา-แพ่ง และกฎหมายเกี่ยวกับดิจิทัลและเทคโนโลยี</p>
                         <p lang="en">We provide legal services in business and international trade law, laws related to foreigners in Thailand, real estate law, family and inheritance law, dispute resolution, administrative cases, criminal and civil cases, and digital and technology law.</p>
                         <a href="#contact" class="service-link" lang="th">ขอคำปรึกษา <i class="fas fa-arrow-right"></i></a>
                         <a href="#contact" class="service-link" lang="en">Get Consultation <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-snowflake"></i>
@@ -168,14 +128,12 @@
                     <div class="service-content">
                         <h3 lang="th">จำหน่ายและบริการเครื่องปรับอากาศ</h3>
                         <h3 lang="en">Air Conditioning Sales & Service</h3>
-                        
                         <p lang="th">จำหน่ายเครื่องปรับอากาศคุณภาพสูงทุกยี่ห้อ พร้อมบริการติดตั้งและบำรุงรักษาโดยทีมช่างผู้เชี่ยวชาญ รับประกันผลงาน มีบริการหลังการขายที่ดีเยี่ยม</p>
                         <p lang="en">We sell high-quality air conditioners of all brands, with installation and maintenance services by a team of experts. We guarantee our work and provide excellent after-sales service.</p>
                         <a href="#contact" class="service-link" lang="th">สอบถามเพิ่มเติม <i class="fas fa-arrow-right"></i></a>
                         <a href="#contact" class="service-link" lang="en">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-plug"></i>
@@ -183,7 +141,6 @@
                     <div class="service-content">
                         <h3 lang="th">จำหน่ายเครื่องใช้ไฟฟ้าในครัวเรือน</h3>
                         <h3 lang="en">Household Appliances</h3>
-                        
                         <p lang="th">ร้านขายปลีกเครื่องใช้ไฟฟ้าชนิดในครัวเรือนที่มีสินค้าหลากหลาย ราคาเป็นมิตร บริการหลังการขายเป็นเลิศ รับประกันสินค้าตามมาตรฐาน</p>
                         <p lang="en">Retail shop for household electrical appliances with a wide range of products, friendly prices, excellent after-sales service, and standard product warranty.</p>
                         <a href="#contact" class="service-link" lang="th">ดูสินค้า <i class="fas fa-arrow-right"></i></a>
@@ -203,11 +160,10 @@
                 <h2 class="section-title" lang="th">เรื่องราวของเรา</h2>
                 <h2 class="section-title" lang="en">Our Story</h2>
             </div>
-
             <div class="about-content">
                 <div class="about-image">
                     <div class="about-img-wrapper">
-       <img src="images/S__16793688.jpg" alt="About Bhagavat Connect" width="60" height="60">
+                        <img src="images/S__16793688.jpg" alt="About Bhagavat Connect" class="responsive-image">
                         <div class="experience-badge">
                             <span class="years">10+</span>
                             <span lang="th">ปีแห่งประสบการณ์</span>
@@ -215,14 +171,11 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="about-text">
                     <h3 lang="th">บริษัท ภควัต คอนเนคท์ จำกัด</h3>
                     <h3 lang="en">Bhagavat Connect Co., Ltd.</h3>
-                    
                     <p lang="th">บริษัท ภควัต คอนเนคท์ จำกัด (Bhagavat Connect Co., Ltd.) ก่อตั้งขึ้นด้วยวิสัยทัศน์ในการเชื่อมโยงธุรกิจ กฎหมาย ศิลปะวัฒนธรรม และเทคโนโลยีดิจิทัลอย่างมีประสิทธิภาพ เรามุ่งนำเสนอทางออกเชิงระบบคุณภาพสูงที่ตอบโจทย์ความต้องการเฉพาะของลูกค้าทุกประเภท</p>
                     <p lang="en">Bhagavat Connect Co., Ltd. was founded with a vision to efficiently connect business, law, arts, culture, and digital technology. We aim to offer high-quality systematic solutions that meet the specific needs of all types of customers.</p>
-                    
                     <div class="about-features">
                         <div class="feature-item">
                             <i class="fas fa-check-circle"></i>
@@ -252,21 +205,18 @@
                             </div>
                         </div>
                     </div>
-                    
                     <div class="expertise-section">
                         <h3 lang="th">ความเชี่ยวชาญของเรา</h3>
                         <h3 lang="en">Our Expertise</h3>
-                        
                         <div class="expertise-tabs">
                             <div class="tab-buttons">
                                 <button class="tab-btn active" data-tab="legal" lang="th">ด้านกฎหมาย</button>
-                                <button class="tab-btn active" data-tab="legal" lang="en">Legal Services</button>
+                                <button class="tab-btn" data-tab="legal" lang="en">Legal Services</button>
                                 <button class="tab-btn" data-tab="tech" lang="th">ด้านเทคโนโลยี</button>
                                 <button class="tab-btn" data-tab="tech" lang="en">Technology</button>
                                 <button class="tab-btn" data-tab="art" lang="th">ด้านศิลปะวัฒนธรรม</button>
                                 <button class="tab-btn" data-tab="art" lang="en">Arts & Culture</button>
                             </div>
-                            
                             <div class="tab-content active" id="legal">
                                 <ul class="expertise-list" lang="th">
                                     <li>กฎหมายธุรกิจและการค้าระหว่างประเทศ</li>
@@ -278,7 +228,6 @@
                                     <li>กฎหมายปกครอง</li>
                                     <li>คดีวินัย และคดีอาญาทุจริต</li>
                                 </ul>
-                                
                                 <ul class="expertise-list" lang="en">
                                     <li>Business and international trade law</li>
                                     <li>Laws related to foreigners in Thailand</li>
@@ -290,7 +239,6 @@
                                     <li>Disciplinary cases and corruption criminal cases</li>
                                 </ul>
                             </div>
-                            
                             <div class="tab-content" id="tech">
                                 <ul class="expertise-list" lang="th">
                                     <li>จำหน่ายและติดตั้งระบบทำความเย็นและระบบไฟฟ้า</li>
@@ -299,7 +247,6 @@
                                     <li>ออกแบบระบบปรับอากาศสำหรับอาคารพาณิชย์</li>
                                     <li>ติดตั้งและซ่อมบำรุงเครื่องใช้ไฟฟ้าในครัวเรือน</li>
                                 </ul>
-                                
                                 <ul class="expertise-list" lang="en">
                                     <li>Sales and installation of cooling systems and electrical systems</li>
                                     <li>Maintenance services by a team of experts</li>
@@ -308,7 +255,6 @@
                                     <li>Installation and maintenance of household electrical appliances</li>
                                 </ul>
                             </div>
-                            
                             <div class="tab-content" id="art">
                                 <ul class="expertise-list" lang="th">
                                     <li>จำหน่ายผลิตภัณฑ์ศิลปะวัฒนธรรมไทย</li>
@@ -316,7 +262,6 @@
                                     <li>จัดแสดงและจำหน่ายผลงานศิลปะไทยร่วมสมัย</li>
                                     <li>บริการให้คำปรึกษาด้านการออกแบบที่ผสานศิลปะวัฒนธรรมไทย</li>
                                 </ul>
-                                
                                 <ul class="expertise-list" lang="en">
                                     <li>Sales of Thai arts and cultural products</li>
                                     <li>Fine craftsmanship that combines contemporary styles with cultural identity</li>
@@ -326,11 +271,9 @@
                             </div>
                         </div>
                     </div>
-                    
                     <div class="core-values">
                         <h4 lang="th">หลักการดำเนินงานของเรา</h4>
                         <h4 lang="en">Our Operational Principles</h4>
-                        
                         <p lang="th">ด้วยทีมงานผู้ทรงคุณวุฒิและมากประสบการณ์ เราพร้อมเป็นพันธมิตรเชิงกลยุทธ์เพื่อความสำเร็จที่ยั่งยืนขององค์กรท่าน โดยยึดหลัก <strong>"นวัตกรรม คุณภาพ ซื่อสัตย์ โปร่งใส มีจริยธรรมทางธุรกิจที่เข้มแข็ง"</strong> เป็นแกนหลักในการดำเนินงาน</p>
                         <p lang="en">With a team of qualified and experienced professionals, we are ready to be your strategic partner for sustainable organizational success. We adhere to the principles of <strong>"Innovation, Quality, Honesty, Transparency, and Strong Business Ethics"</strong> as the core of our operations.</p>
                     </div>
@@ -340,42 +283,40 @@
     </section>
 
     <!-- Team Section -->
- <!-- แก้ไขส่วนของทีมงาน -->
-<section class="team section-padding" id="team">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-subtitle" lang="th">ทีมงานของเรา</span>
-            <span class="section-subtitle" lang="en">Our Team</span>
-            <h2 class="section-title" lang="th">ผู้เชี่ยวชาญของเรา</h2>
-            <h2 class="section-title" lang="en">Our Experts</h2>
-            <p lang="th">ทีมงานมากประสบการณ์ที่พร้อมให้บริการอย่างมืออาชีพ</p>
-            <p lang="en">Our experienced team ready to provide professional services</p>
-        </div>
-
-        <div class="team-container">
-            <div class="team-grid">
-                <div class="team-member">
-                    <div class="member-img">
-                        <img src="images/S__16957488.jpg" alt="นาย คหบดี คชาเสถ" class="responsive-image">
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    <section class="team section-padding" id="team">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle" lang="th">ทีมงานของเรา</span>
+                <span class="section-subtitle" lang="en">Our Team</span>
+                <h2 class="section-title" lang="th">ผู้เชี่ยวชาญของเรา</h2>
+                <h2 class="section-title" lang="en">Our Experts</h2>
+                <p lang="th">ทีมงานมากประสบการณ์ที่พร้อมให้บริการอย่างมืออาชีพ</p>
+                <p lang="en">Our experienced team ready to provide professional services</p>
+            </div>
+            <div class="team-container">
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-img">
+                            <img src="images/S__16957488.jpg" alt="นาย คหบดี คชาเสถ" class="responsive-image">
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="member-info">
-                        <h3 lang="th">นาย คหบดี คชาเสถ</h3>
-                        <h3 lang="en">Mr. Kahabordee Kachasat</h3>
-                        <span lang="th">หัวหน้าสำนักงานกฎหมายและทนายความ</span>
-                        <span lang="en">Head of Law Office and Attorney</span>
-                        <p lang="th">มีประสบการณ์ด้านกฎหมายกว่า 10 ปี</p>
-                        <p lang="en">Over 10 years of legal experience</p>
+                        <div class="member-info">
+                            <h3 lang="th">นาย คหบดี คชาเสถ</h3>
+                            <h3 lang="en">Mr. Kahabordee Kachasat</h3>
+                            <span lang="th">หัวหน้าสำนักงานกฎหมายและทนายความ</span>
+                            <span lang="en">Head of Law Office and Attorney</span>
+                            <p lang="th">มีประสบการณ์ด้านกฎหมายกว่า 10 ปี</p>
+                            <p lang="en">Over 10 years of legal experience</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- FAQ Section -->
     <section class="faq section-padding">
@@ -388,7 +329,6 @@
                 <p lang="th">ข้อสงสัยที่ลูกค้ามักถามเกี่ยวกับบริการของเรา</p>
                 <p lang="en">Common questions our clients ask about our services</p>
             </div>
-
             <div class="faq-container">
                 <div class="faq-item">
                     <div class="faq-question">
@@ -401,7 +341,6 @@
                         <p lang="en">We provide various legal services including business and international trade law, laws related to foreigners in Thailand, real estate law, family and inheritance law, digital and information technology law, civil and criminal law, administrative law, disciplinary cases, and corruption criminal cases.</p>
                     </div>
                 </div>
-
                 <div class="faq-item">
                     <div class="faq-question">
                         <h3 lang="th">มีบริการหลังการขายสำหรับเครื่องปรับอากาศหรือไม่?</h3>
@@ -413,7 +352,7 @@
                         <p lang="en">Yes, we offer after-sales service for all air conditioner models we sell, including regular maintenance, repairs, and consultation on efficient usage.</p>
                     </div>
                 </div>
-<div class="faq-item">
+                <div class="faq-item">
                     <div class="faq-question">
                         <h3 lang="th">ค่าบริการด้านกฎหมายคิดอย่างไร?</h3>
                         <h3 lang="en">How are legal service fees calculated?</h3>
@@ -424,7 +363,11 @@
                         <p lang="en">Legal service fees depend on the type and complexity of the work. We can charge either a flat fee or an hourly rate. You can schedule an initial consultation with our legal team to assess the appropriate fee.</p>
                     </div>
                 </div>
-<!-- Contact Section -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <section class="contact section-padding" id="contact">
         <div class="container">
             <div class="section-header">
@@ -435,12 +378,10 @@
                 <p lang="th">หากคุณสนใจบริการของเราหรือมีข้อสงสัยใดๆ โปรดติดต่อเราได้ตามช่องทางด้านล่าง</p>
                 <p lang="en">If you are interested in our services or have any questions, please contact us through the channels below</p>
             </div>
-            
             <div class="contact-container">
                 <div class="contact-info">
                     <h3 lang="th">ข้อมูลติดต่อ</h3>
                     <h3 lang="en">Contact Information</h3>
-                    
                     <div class="contact-info-item">
                         <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
@@ -451,7 +392,6 @@
                             <p>224/235 โกลเด้นทาวน์ 2 รามอินทรา-วงแหวน<br>ถนนกาญจนาภิเษก แขวงท่าแร้ง<br>เขตบางเขน กรุงเทพฯ 10220</p>
                         </div>
                     </div>
-                    
                     <div class="contact-info-item">
                         <div class="contact-icon">
                             <i class="fas fa-phone-alt"></i>
@@ -462,7 +402,6 @@
                             <p>+66 9 5639 3253</p>
                         </div>
                     </div>
-                    
                     <div class="contact-info-item">
                         <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
@@ -473,7 +412,6 @@
                             <p>bhagavat235@gmail.com</p>
                         </div>
                     </div>
-                    
                     <div class="contact-info-item">
                         <div class="contact-icon">
                             <i class="fas fa-clock"></i>
@@ -485,34 +423,29 @@
                             <p lang="en">Monday - Friday: 9:00 - 18:00<br>Saturday: 9:00 - 15:00<br>Sunday: Closed</p>
                         </div>
                     </div>
- <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"https://www.facebook.com/profile.php?id=61571298165470></i></a>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61571298165470"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
-                
                 <div class="contact-form">
                     <h3 lang="th">ส่งข้อความถึงเรา</h3>
                     <h3 lang="en">Send us a message</h3>
-                    
                     <form id="contactForm">
                         <div class="form-group">
                             <label for="name" lang="th">ชื่อ-นามสกุล</label>
                             <label for="name" lang="en">Full Name</label>
                             <input type="text" id="name" class="form-control" required>
                         </div>
-                        
                         <div class="form-group">
                             <label for="email" lang="th">อีเมล</label>
                             <label for="email" lang="en">Email</label>
                             <input type="email" id="email" class="form-control" required>
                         </div>
-                        
                         <div class="form-group">
                             <label for="phone" lang="th">เบอร์โทรศัพท์</label>
                             <label for="phone" lang="en">Phone Number</label>
                             <input type="tel" id="phone" class="form-control">
                         </div>
-                        
                         <div class="form-group">
                             <label for="service" lang="th">บริการที่สนใจ</label>
                             <label for="service" lang="en">Service Interested In</label>
@@ -521,7 +454,7 @@
                                 <option value="" lang="en">-- Select Service --</option>
                                 <option value="legal" lang="th">บริการด้านกฎหมาย</option>
                                 <option value="legal" lang="en">Legal Services</option>
-        <option value="ac" lang="th">เครื่องปรับอากาศ</option>
+                                <option value="ac" lang="th">เครื่องปรับอากาศ</option>
                                 <option value="ac" lang="en">Air Conditioning</option>
                                 <option value="appliances" lang="th">เครื่องใช้ไฟฟ้า</option>
                                 <option value="appliances" lang="en">Electrical Appliances</option>
@@ -531,20 +464,19 @@
                                 <option value="other" lang="en">Other</option>
                             </select>
                         </div>
-                        
                         <div class="form-group">
                             <label for="message" lang="th">ข้อความ</label>
                             <label for="message" lang="en">Message</label>
                             <textarea id="message" class="form-control" rows="5" required></textarea>
                         </div>
-                        
                         <button type="submit" class="btn primary-btn submit-btn" lang="th">ส่งข้อความ</button>
                         <button type="submit" class="btn primary-btn submit-btn" lang="en">Send Message</button>
                     </form>
                 </div>
             </div>
         </div>
-    </section> 
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -555,14 +487,13 @@
                     </div>
                     <p lang="th">บริษัท ภควัต คอนเนคท์ จำกัด ให้บริการด้านกฎหมาย เทคโนโลยี และศิลปวัฒนธรรม ด้วยมาตรฐานสูงสุดและความเป็นมืออาชีพ</p>
                     <p lang="en">Bhagavat Connect Co., Ltd. provides legal, technology, and cultural arts services with the highest standards and professionalism.</p>
-                    <div class="footer-social">
+                </div>
                 <div class="footer-links">
                     <h3 lang="th">ลิงก์ที่มีประโยชน์</h3>
                     <h3 lang="en">Useful Links</h3>
                     <ul>
                         <li><a href="#home" lang="th">หน้าหลัก</a><a href="#home" lang="en">Home</a></li>
                         <li><a href="#services" lang="th">บริการ</a><a href="#services" lang="en">Services</a></li>
-                        <li><a href="#portfolio" lang="th">ผลงาน</a><a href="#portfolio" lang="en">Portfolio</a></li>
                         <li><a href="#about" lang="th">เกี่ยวกับเรา</a><a href="#about" lang="en">About Us</a></li>
                         <li><a href="#team" lang="th">ทีมงาน</a><a href="#team" lang="en">Our Team</a></li>
                         <li><a href="#contact" lang="th">ติดต่อ</a><a href="#contact" lang="en">Contact</a></li>
@@ -578,16 +509,16 @@
                         <li><a href="#services" lang="th">ศิลปะและวัฒนธรรม</a><a href="#services" lang="en">Arts & Culture</a></li>
                     </ul>
                 </div>
-                <div class="copyright">
-                    <p lang="th">&copy; 2025 บริษัท ภควัต คอนเนคท์ จำกัด. สงวนลิขสิทธิ์.</p>
-                    <p lang="en">&copy; 2025 Bhagavat Connect Co., Ltd. All Rights Reserved.</p>
-                </div>
-                <div class="footer-policy-links">
-                    <a href="#" lang="th">นโยบายความเป็นส่วนตัว</a>
-                    <a href="#" lang="en">Privacy Policy</a>
-                    <a href="#" lang="th">ข้อกำหนดการใช้งาน</a>
-                    <a href="#" lang="en">Terms of Service</a>
-                </div>
+            </div>
+            <div class="copyright">
+                <p lang="th">&copy; 2025 บริษัท ภควัต คอนเนคท์ จำกัด. สงวนลิขสิทธิ์.</p>
+                <p lang="en">&copy; 2025 Bhagavat Connect Co., Ltd. All Rights Reserved.</p>
+            </div>
+            <div class="footer-policy-links">
+                <a href="#" lang="th">นโยบายความเป็นส่วนตัว</a>
+                <a href="#" lang="en">Privacy Policy</a>
+                <a href="#" lang="th">ข้อกำหนดการใช้งาน</a>
+                <a href="#" lang="en">Terms of Service</a>
             </div>
         </div>
     </footer>
@@ -597,7 +528,6 @@
 
     <!-- JavaScript -->
     <script src="js/script.js"></script>
+    <script src="js/language-fix.js"></script>
 </body>
 </html>
-<link rel="stylesheet" href="css/responsive-fix.css">
-<script src="js/language-fix.js"></script>
