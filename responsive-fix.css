@@ -1,21 +1,4 @@
-/* แก้ไขการแสดงผลภาษา */
-[lang="en"] {
-    display: none !important;
-}
-
-[lang="th"] {
-    display: block !important;
-}
-
-/* กรณีพิเศษสำหรับ inline elements */
-span[lang="th"], a[lang="th"], button[lang="th"] {
-    display: inline-block !important;
-}
-
-/* กรณีพิเศษสำหรับ list items */
-li[lang="th"] {
-    display: list-item !important;
-}
+/* แก้ไขการแสดงผลให้เป็น Responsive บนทุกอุปกรณ์ */
 
 /* กำหนดรูปภาพให้แสดงเต็ม */
 .responsive-image, .member-img img {
@@ -29,6 +12,15 @@ li[lang="th"] {
 .team-member {
     width: 100%;
     margin: 0 auto 20px;
+}
+
+/* เพิ่มเงาให้ข้อความในส่วน Hero เพื่อให้อ่านง่ายยิ่งขึ้น */
+.hero h2 {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4) !important;
+}
+
+.hero p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) !important;
 }
 
 /* สำหรับการแสดงผลบนมือถือ */
@@ -47,18 +39,76 @@ li[lang="th"] {
         max-height: none !important;
     }
     
-    /* ซ่อนข้อความภาษาอังกฤษบนมือถือ */
-    [lang="en"] {
-        display: none !important;
+    /* ตรวจสอบให้แน่ใจว่ารูปไซส์เหมาะสมกับหน้าจอขนาดเล็ก */
+    .hero, .services, .about, .team, .contact {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
     }
     
-    /* แสดงข้อความภาษาไทยบนมือถือ */
-    [lang="th"] {
-        display: block !important;
+    /* ปรับขนาดฟอนต์สำหรับหน้าจอขนาดเล็ก */
+    .section-title {
+        font-size: 26px !important;
     }
     
-    /* สำหรับ inline elements */
-    span[lang="th"], a[lang="th"], button[lang="th"] {
-        display: inline-block !important;
+    .service-content h3 {
+        font-size: 20px !important;
+    }
+    
+    /* ปรับปรุงเมนูให้ดูดีบนมือถือ */
+    .nav-menu.active {
+        padding-top: 20px !important;
+    }
+    
+    .nav-menu li {
+        margin: 10px 0 !important;
+    }
+}
+
+/* สำหรับมือถือขนาดเล็ก */
+@media screen and (max-width: 480px) {
+    .hero h2 {
+        font-size: 22px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .hero p {
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+    }
+    
+    .hero-buttons {
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+    
+    .hero-buttons .btn {
+        width: 100% !important;
+    }
+    
+    .stats-grid {
+        gap: 15px !important;
+    }
+    
+    .stat-item {
+        padding: 10px !important;
+    }
+    
+    .stat-item h3 {
+        font-size: 30px !important;
+    }
+    
+    .section-padding {
+        padding: 60px 0 !important;
+    }
+}
+
+/* สำหรับแท็บเล็ต */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
     }
 }
